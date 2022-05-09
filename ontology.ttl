@@ -1,0 +1,405 @@
+@prefix : <https://change-detection-ontology.adaptcentre.ie/#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://change-detection-ontology.adaptcentre.ie/#> .
+
+<https://change-detection-ontology.adaptcentre.ie/#> rdf:type owl:Ontology ;
+                                                      owl:imports <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#> ,
+                                                                  <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#> ,
+                                                                  <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#> ;
+                                                      <http://purl.org/dc/terms/abstract> "The Change Detection Ontology (CDO) provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance and metadata information relating to changes that occur within source data that has created an RDF dataset. It can also be specialized to create new classes and properties to model provenance and metadata information for domain specific changes." ;
+                                                      <http://purl.org/dc/terms/created> "20 April 2022" ;
+                                                      <http://purl.org/dc/terms/creator> "Alex Randles" ,
+                                                                                         "Declan O'Sullivan" ;
+                                                      <http://purl.org/dc/terms/description> """The Change Detection Ontology (CDO) is used to capture information which relates the changes that have occured within the source data of an RDF dataset. 
+
+The ontology allows a notification policy to be defined to notify users when a threshold of changes have occured. Once notified the mapping and source data should be re-examined to ensure no further action is required.""" ;
+                                                      <http://purl.org/dc/terms/license> "http://creativecommons.org/publicdomain/zero/1.0/" ;
+                                                      <http://purl.org/dc/terms/title> "Change Detection Ontology (CDO)" ;
+                                                      <http://purl.org/vocab/vann/preferredNamespacePrefix> "cdo" ;
+                                                      <http://purl.org/vocab/vann/preferredNamespaceUri> "https://change-detection-ontology.adaptcentre.ie/#" ;
+                                                      owl:versionInfo "20 April 2022" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#action
+<http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#action> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#actor
+<http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#actor> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#startingConstraint
+<http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#startingConstraint> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#desc
+<http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#desc> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#grants
+<http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#grants> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://linkedevents.org/ontology/atPlace
+<http://linkedevents.org/ontology/atPlace> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://linkedevents.org/ontology/Event> ;
+                                           rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place> ;
+                                           <http://purl.org/dc/terms/issued> "2009-07-28"^^xsd:date ;
+                                           rdfs:comment """
+This property relates an event to some meaningful place, which may
+have a name (e.g. \"Paris\") or may be defined relative to some other
+entity or entities (e.g. \"the unincorporated area between Carson and
+Harbor Gateway\"). An event may be related to more than one such
+place."""@en ;
+                                           rdfs:isDefinedBy <http://linkedevents.org/ontology/Event> ;
+                                           rdfs:label "at place"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> """
+a named or relatively specified place that is where
+an event happened."""@en .
+
+
+###  http://linkedevents.org/ontology/atTime
+<http://linkedevents.org/ontology/atTime> rdf:type owl:ObjectProperty ,
+                                                   owl:FunctionalProperty ;
+                                          rdfs:domain <http://linkedevents.org/ontology/Event> ;
+                                          rdfs:range <http://www.w3.org/2006/time#TemporalEntity> ;
+                                          <http://purl.org/dc/terms/issued> "2009-07-28"^^xsd:date ;
+                                          rdfs:comment """
+Equivalent definitions from other ontologies:
+
+* C4DM Event ontology: \"Relates an event to a time object, classifying
+  a time region (either instantaneous or having an extent).\""""@en ,
+                                                       """
+This property relates an event to some subjectively imposed temporal
+boundaries, i.e. a span of time. An event can be related to only one
+such span of time."""@en ;
+                                          rdfs:isDefinedBy <http://linkedevents.org/ontology/> ;
+                                          rdfs:label "at time"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#definition> """
+an abstract instant or interval of
+time that is when an event happened."""@en .
+
+
+###  http://linkedevents.org/ontology/involvedAgent
+<http://linkedevents.org/ontology/involvedAgent> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <http://linkedevents.org/ontology/Event> ;
+                                                 rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+                                                 <http://purl.org/dc/terms/issued> "2009-07-28"^^xsd:date ;
+                                                 rdfs:comment """
+This property relates an event to anything with agency, such as a
+(legal or natural) person, a group, an organization, a computational
+agent, etc. It does not imply any causal relationship, influence,
+intentionality, etc."""@en ;
+                                                 rdfs:isDefinedBy <http://linkedevents.org/ontology/> ;
+                                                 rdfs:label "involved agent"@en ;
+                                                 <http://www.w3.org/2004/02/skos/core#definition> "an agent involved in an event."@en .
+
+
+###  https://change-detection-ontology.adaptcentre.ie/#hasEvent
+:hasEvent rdf:type owl:ObjectProperty ;
+          owl:inverseOf :inEventLog ;
+          rdfs:domain :ChangeLog ;
+          rdfs:range <http://linkedevents.org/ontology/Event> ;
+          rdfs:comment "An event within a certain event log" ;
+          rdfs:label "hasEvent" .
+
+
+###  https://change-detection-ontology.adaptcentre.ie/#hasOwner
+:hasOwner rdf:type owl:ObjectProperty ;
+          owl:inverseOf :ownedBy ;
+          rdfs:domain :ChangeLog ;
+          rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+          rdfs:comment "The owner of the event log" ;
+          rdfs:label "hasOwner" .
+
+
+###  https://change-detection-ontology.adaptcentre.ie/#inEventLog
+:inEventLog rdf:type owl:ObjectProperty ;
+            rdfs:domain <http://linkedevents.org/ontology/Event> ;
+            rdfs:range :ChangeLog ;
+            rdfs:comment "An event within an event log" ;
+            rdfs:label "inEventLog" .
+
+
+###  https://change-detection-ontology.adaptcentre.ie/#ownedBy
+:ownedBy rdf:type owl:ObjectProperty ;
+         rdfs:comment "The agent who owns the change log" ;
+         rdfs:label "ownedBy" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/2006/time#inXSDDateTimeStamp
+<http://www.w3.org/2006/time#inXSDDateTimeStamp> rdf:type owl:DatatypeProperty .
+
+
+###  https://change-detection-ontology.adaptcentre.ie/#hasReason
+:hasReason rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain <http://linkedevents.org/ontology/Event> ;
+           rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://linkedevents.org/ontology/Event
+<http://linkedevents.org/ontology/Event> rdf:type owl:Class ;
+                                         owl:disjointWith :ChangeLog ;
+                                         <http://purl.org/dc/terms/issued> "2009-07-28"^^xsd:date ;
+                                         rdfs:comment """
+An event consists of some temporal and spatial boundaries subjectively
+imposed on the flux of reality or imagination, that we wish to treat
+as an entity for the purposes of making statements about it. In
+particular, we may wish to make statements that relate people, places,
+or things to an event."""@en ,
+                                                      """
+Note that, unlike some defintions of \"event,\" this definition does not
+specify that an event involves a change of state, nor does it attempt
+to distinguish events from processes or states."""@en ;
+                                         rdfs:isDefinedBy <http://linkedevents.org/ontology/> ;
+                                         rdfs:label "Event"@en ;
+                                         <http://www.w3.org/2004/02/skos/core#definition> """
+\"Something that happened,\" as might be reported in a news article or
+explained by a historian."""@en .
+
+
+###  http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiAction.owl#Action
+<http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiAction.owl#Action> rdf:type owl:Class .
+
+
+###  http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#Obligation
+<http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#Obligation> rdf:type owl:Class .
+
+
+###  http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiEntity.owl#Agent
+<http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiEntity.owl#Agent> rdf:type owl:Class .
+
+
+###  http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy
+<http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#TemporalEntity
+<http://www.w3.org/2006/time#TemporalEntity> rdf:type owl:Class .
+
+
+###  https://change-detection-ontology.adaptcentre.ie/#ChangeLog
+:ChangeLog rdf:type owl:Class ;
+           rdfs:comment "A grouping of changes that have occured relating to a specific source data." ;
+           rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
+           rdfs:label "ChangeLog" .
+
+
+###  https://change-detection-ontology.adaptcentre.ie/#DatatypeSourceData
+:DatatypeSourceData rdf:type owl:Class ;
+                    rdfs:subClassOf <http://linkedevents.org/ontology/Event> ;
+                    owl:disjointWith :DeleteSourceData ,
+                                     :InsertSourceData ,
+                                     :MergeSourceData ,
+                                     :MoveSourceData ;
+                    rdfs:comment "Datatype has been changed in the source data" ;
+                    rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
+                    rdfs:label "DatatypeSourceData" .
+
+
+###  https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData
+:DeleteSourceData rdf:type owl:Class ;
+                  rdfs:subClassOf <http://linkedevents.org/ontology/Event> ;
+                  rdfs:comment "Data has been removed within the source data." ;
+                  rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
+                  rdfs:label "DeleteSourceData" .
+
+
+###  https://change-detection-ontology.adaptcentre.ie/#InsertSourceData
+:InsertSourceData rdf:type owl:Class ;
+                  rdfs:subClassOf <http://linkedevents.org/ontology/Event> ;
+                  rdfs:comment "Data has been inserted within the source data." ;
+                  rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
+                  rdfs:label "InsertSourceData" .
+
+
+###  https://change-detection-ontology.adaptcentre.ie/#MergeSourceData
+:MergeSourceData rdf:type owl:Class ;
+                 rdfs:subClassOf <http://linkedevents.org/ontology/Event> ;
+                 rdfs:comment "Data has been merged within the source data." ;
+                 rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
+                 rdfs:label "MergeSourceData" .
+
+
+###  https://change-detection-ontology.adaptcentre.ie/#MoveSourceData
+:MoveSourceData rdf:type owl:Class ;
+                rdfs:subClassOf <http://linkedevents.org/ontology/Event> ;
+                rdfs:comment "Data has been moved within the source data." ;
+                rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
+                rdfs:label "MoveSourceData" .
+
+
+###  https://change-detection-ontology.adaptcentre.ie/#UpdateSourceData
+:UpdateSourceData rdf:type owl:Class ;
+                  rdfs:subClassOf <http://linkedevents.org/ontology/Event> ;
+                  rdfs:comment "Data has been updated within the source data." ;
+                  rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
+                  rdfs:label "UpdateSourceData" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/changeLog
+<http://example.org/changeLog> rdf:type owl:NamedIndividual ,
+                                        :ChangeLog ;
+                               :hasEvent <http://example.org/insertEvent1> ,
+                                         <http://example.org/insertEvent2> .
+
+
+###  http://example.org/detectionTime
+<http://example.org/detectionTime> rdf:type owl:NamedIndividual ,
+                                            <http://www.w3.org/2006/time#Instant> ;
+                                   <http://www.w3.org/2006/time#inXSDDateTimeStamp> "2004-04-12T13:20:00Z" .
+
+
+###  http://example.org/eventLog
+<http://example.org/eventLog> rdf:type owl:NamedIndividual ,
+                                       :ChangeLog ;
+                              :hasEvent <http://example.org/insertEvent1> ,
+                                        <http://example.org/insertEvent2> .
+
+
+###  http://example.org/insertEvent1
+<http://example.org/insertEvent1> rdf:type owl:NamedIndividual ,
+                                           :InsertSourceData ;
+                                  <http://linkedevents.org/ontology/atPlace> <http://example.org/sourceData> ;
+                                  <http://linkedevents.org/ontology/atTime> <http://example.org/detectionTime> ;
+                                  <http://linkedevents.org/ontology/involvedAgent> <http://example.org/userAgent> ;
+                                  :hasReason "Value '12' inserted into 'ID' element." .
+
+
+###  http://example.org/insertEvent2
+<http://example.org/insertEvent2> rdf:type owl:NamedIndividual ,
+                                           :InsertSourceData ;
+                                  <http://linkedevents.org/ontology/atPlace> <http://example.org/sourceData> ;
+                                  <http://linkedevents.org/ontology/atTime> <http://example.org/detectionTime> ;
+                                  <http://linkedevents.org/ontology/involvedAgent> <http://example.org/userAgent> ;
+                                  :hasReason "Value '23' inserted into 'ID' element" .
+
+
+###  http://example.org/notificationConstraint
+<http://example.org/notificationConstraint> rdf:type owl:NamedIndividual ,
+                                                     <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> .
+
+
+###  http://example.org/notificationPolicy
+<http://example.org/notificationPolicy> rdf:type owl:NamedIndividual ,
+                                                 <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy> ;
+                                        <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#grants> <http://example.org/policyObligation> .
+
+
+###  http://example.org/policyObligation
+<http://example.org/policyObligation> rdf:type owl:NamedIndividual ,
+                                               <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#Obligation> ;
+                                      <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#action> <http://example.org/sendNotificationAction> ;
+                                      <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#actor> <http://example.org/softwareAgent> ,
+                                                                                                            <http://example.org/userAgent> ;
+                                      <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#startingConstraint> <http://example.org/notificationConstraint> ;
+                                      <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#desc> "Obligation to send notification when threshold satisified" .
+
+
+###  http://example.org/sendNotificationAction
+<http://example.org/sendNotificationAction> rdf:type owl:NamedIndividual ,
+                                                     <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiAction.owl#Action> .
+
+
+###  http://example.org/softwareAgent
+<http://example.org/softwareAgent> rdf:type owl:NamedIndividual ,
+                                            <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiEntity.owl#Agent> .
+
+
+###  http://example.org/sourceData
+<http://example.org/sourceData> rdf:type owl:NamedIndividual ,
+                                         <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place> ;
+                                <http://linkedevents.org/ontology/atPlace> <http://example.org/sourceData> .
+
+
+###  http://example.org/userAgent
+<http://example.org/userAgent> rdf:type owl:NamedIndividual ,
+                                        <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiEntity.owl#Agent> ,
+                                        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
