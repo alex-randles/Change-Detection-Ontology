@@ -27,6 +27,18 @@ The ontology allows a notification policy to be defined to notify users when a t
 #    Annotation properties
 #################################################################
 
+###  http://linkedevents.org/ontology/atPlace
+<http://linkedevents.org/ontology/atPlace> rdf:type owl:AnnotationProperty .
+
+
+###  http://linkedevents.org/ontology/atTime
+<http://linkedevents.org/ontology/atTime> rdf:type owl:AnnotationProperty .
+
+
+###  http://linkedevents.org/ontology/involvedAgent
+<http://linkedevents.org/ontology/involvedAgent> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/abstract
 <http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
 
@@ -99,67 +111,12 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://linkedevents.org/ontology/atPlace
-<http://linkedevents.org/ontology/atPlace> rdf:type owl:ObjectProperty ;
-                                           rdfs:domain <http://linkedevents.org/ontology/Event> ;
-                                           rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place> ;
-                                           <http://purl.org/dc/terms/issued> "2009-07-28"^^xsd:date ;
-                                           rdfs:comment """
-This property relates an event to some meaningful place, which may
-have a name (e.g. \"Paris\") or may be defined relative to some other
-entity or entities (e.g. \"the unincorporated area between Carson and
-Harbor Gateway\"). An event may be related to more than one such
-place."""@en ;
-                                           rdfs:isDefinedBy <http://linkedevents.org/ontology/Event> ;
-                                           rdfs:label "at place"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> """
-a named or relatively specified place that is where
-an event happened."""@en .
-
-
-###  http://linkedevents.org/ontology/atTime
-<http://linkedevents.org/ontology/atTime> rdf:type owl:ObjectProperty ,
-                                                   owl:FunctionalProperty ;
-                                          rdfs:domain <http://linkedevents.org/ontology/Event> ;
-                                          rdfs:range <http://www.w3.org/2006/time#TemporalEntity> ;
-                                          <http://purl.org/dc/terms/issued> "2009-07-28"^^xsd:date ;
-                                          rdfs:comment """
-Equivalent definitions from other ontologies:
-
-* C4DM Event ontology: \"Relates an event to a time object, classifying
-  a time region (either instantaneous or having an extent).\""""@en ,
-                                                       """
-This property relates an event to some subjectively imposed temporal
-boundaries, i.e. a span of time. An event can be related to only one
-such span of time."""@en ;
-                                          rdfs:isDefinedBy <http://linkedevents.org/ontology/> ;
-                                          rdfs:label "at time"@en ;
-                                          <http://www.w3.org/2004/02/skos/core#definition> """
-an abstract instant or interval of
-time that is when an event happened."""@en .
-
-
-###  http://linkedevents.org/ontology/involvedAgent
-<http://linkedevents.org/ontology/involvedAgent> rdf:type owl:ObjectProperty ;
-                                                 rdfs:domain <http://linkedevents.org/ontology/Event> ;
-                                                 rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
-                                                 <http://purl.org/dc/terms/issued> "2009-07-28"^^xsd:date ;
-                                                 rdfs:comment """
-This property relates an event to anything with agency, such as a
-(legal or natural) person, a group, an organization, a computational
-agent, etc. It does not imply any causal relationship, influence,
-intentionality, etc."""@en ;
-                                                 rdfs:isDefinedBy <http://linkedevents.org/ontology/> ;
-                                                 rdfs:label "involved agent"@en ;
-                                                 <http://www.w3.org/2004/02/skos/core#definition> "an agent involved in an event."@en .
-
-
 ###  https://change-detection-ontology.adaptcentre.ie/#hasEvent
 :hasEvent rdf:type owl:ObjectProperty ;
           owl:inverseOf :inEventLog ;
           rdfs:domain :ChangeLog ;
           rdfs:range <http://linkedevents.org/ontology/Event> ;
-          rdfs:comment "An event within a certain event log" ;
+          rdfs:comment "An event within a certain event log." ;
           rdfs:label "hasEvent" .
 
 
@@ -168,7 +125,7 @@ intentionality, etc."""@en ;
           owl:inverseOf :ownedBy ;
           rdfs:domain :ChangeLog ;
           rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
-          rdfs:comment "The owner of the event log" ;
+          rdfs:comment "The owner of the event log." ;
           rdfs:label "hasOwner" .
 
 
@@ -176,13 +133,13 @@ intentionality, etc."""@en ;
 :inEventLog rdf:type owl:ObjectProperty ;
             rdfs:domain <http://linkedevents.org/ontology/Event> ;
             rdfs:range :ChangeLog ;
-            rdfs:comment "An event within an event log" ;
+            rdfs:comment "An event within an event log." ;
             rdfs:label "inEventLog" .
 
 
 ###  https://change-detection-ontology.adaptcentre.ie/#ownedBy
 :ownedBy rdf:type owl:ObjectProperty ;
-         rdfs:comment "The agent who owns the change log" ;
+         rdfs:comment "The agent who owns the change log." ;
          rdfs:label "ownedBy" .
 
 
@@ -206,24 +163,7 @@ intentionality, etc."""@en ;
 #################################################################
 
 ###  http://linkedevents.org/ontology/Event
-<http://linkedevents.org/ontology/Event> rdf:type owl:Class ;
-                                         owl:disjointWith :ChangeLog ;
-                                         <http://purl.org/dc/terms/issued> "2009-07-28"^^xsd:date ;
-                                         rdfs:comment """
-An event consists of some temporal and spatial boundaries subjectively
-imposed on the flux of reality or imagination, that we wish to treat
-as an entity for the purposes of making statements about it. In
-particular, we may wish to make statements that relate people, places,
-or things to an event."""@en ,
-                                                      """
-Note that, unlike some defintions of \"event,\" this definition does not
-specify that an event involves a change of state, nor does it attempt
-to distinguish events from processes or states."""@en ;
-                                         rdfs:isDefinedBy <http://linkedevents.org/ontology/> ;
-                                         rdfs:label "Event"@en ;
-                                         <http://www.w3.org/2004/02/skos/core#definition> """
-\"Something that happened,\" as might be reported in a news article or
-explained by a historian."""@en .
+<http://linkedevents.org/ontology/Event> rdf:type owl:Class .
 
 
 ###  http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiAction.owl#Action
@@ -268,11 +208,7 @@ explained by a historian."""@en .
 ###  https://change-detection-ontology.adaptcentre.ie/#DatatypeSourceData
 :DatatypeSourceData rdf:type owl:Class ;
                     rdfs:subClassOf <http://linkedevents.org/ontology/Event> ;
-                    owl:disjointWith :DeleteSourceData ,
-                                     :InsertSourceData ,
-                                     :MergeSourceData ,
-                                     :MoveSourceData ;
-                    rdfs:comment "Datatype has been changed in the source data" ;
+                    rdfs:comment "Datatype has been changed in the source data." ;
                     rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
                     rdfs:label "DatatypeSourceData" .
 
@@ -344,19 +280,19 @@ explained by a historian."""@en .
 ###  http://example.org/insertEvent1
 <http://example.org/insertEvent1> rdf:type owl:NamedIndividual ,
                                            :InsertSourceData ;
+                                  :hasReason "Value '12' inserted into 'ID' element." ;
                                   <http://linkedevents.org/ontology/atPlace> <http://example.org/sourceData> ;
                                   <http://linkedevents.org/ontology/atTime> <http://example.org/detectionTime> ;
-                                  <http://linkedevents.org/ontology/involvedAgent> <http://example.org/userAgent> ;
-                                  :hasReason "Value '12' inserted into 'ID' element." .
+                                  <http://linkedevents.org/ontology/involvedAgent> <http://example.org/userAgent> .
 
 
 ###  http://example.org/insertEvent2
 <http://example.org/insertEvent2> rdf:type owl:NamedIndividual ,
                                            :InsertSourceData ;
+                                  :hasReason "Value '23' inserted into 'ID' element" ;
                                   <http://linkedevents.org/ontology/atPlace> <http://example.org/sourceData> ;
                                   <http://linkedevents.org/ontology/atTime> <http://example.org/detectionTime> ;
-                                  <http://linkedevents.org/ontology/involvedAgent> <http://example.org/userAgent> ;
-                                  :hasReason "Value '23' inserted into 'ID' element" .
+                                  <http://linkedevents.org/ontology/involvedAgent> <http://example.org/userAgent> .
 
 
 ###  http://example.org/notificationConstraint

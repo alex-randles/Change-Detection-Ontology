@@ -128,119 +128,16 @@
   } ]
 }, {
   "@id" : "http://linkedevents.org/ontology/Event",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/terms/issued" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2009-07-28"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "\nAn event consists of some temporal and spatial boundaries subjectively\nimposed on the flux of reality or imagination, that we wish to treat\nas an entity for the purposes of making statements about it. In\nparticular, we may wish to make statements that relate people, places,\nor things to an event."
-  }, {
-    "@language" : "en",
-    "@value" : "\nNote that, unlike some defintions of \"event,\" this definition does not\nspecify that an event involves a change of state, nor does it attempt\nto distinguish events from processes or states."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://linkedevents.org/ontology/"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Event"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://change-detection-ontology.adaptcentre.ie/#ChangeLog"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "\n\"Something that happened,\" as might be reported in a news article or\nexplained by a historian."
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://linkedevents.org/ontology/atPlace",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.org/dc/terms/issued" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2009-07-28"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "\nThis property relates an event to some meaningful place, which may\nhave a name (e.g. \"Paris\") or may be defined relative to some other\nentity or entities (e.g. \"the unincorporated area between Carson and\nHarbor Gateway\"). An event may be related to more than one such\nplace."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://linkedevents.org/ontology/Event"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://linkedevents.org/ontology/Event"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "at place"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "\na named or relatively specified place that is where\nan event happened."
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://linkedevents.org/ontology/atTime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
-  "http://purl.org/dc/terms/issued" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2009-07-28"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "\nEquivalent definitions from other ontologies:\n\n* C4DM Event ontology: \"Relates an event to a time object, classifying\n  a time region (either instantaneous or having an extent).\""
-  }, {
-    "@language" : "en",
-    "@value" : "\nThis property relates an event to some subjectively imposed temporal\nboundaries, i.e. a span of time. An event can be related to only one\nsuch span of time."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://linkedevents.org/ontology/Event"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://linkedevents.org/ontology/"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "at time"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "\nan abstract instant or interval of\ntime that is when an event happened."
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://linkedevents.org/ontology/involvedAgent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.org/dc/terms/issued" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2009-07-28"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "\nThis property relates an event to anything with agency, such as a\n(legal or natural) person, a group, an organization, a computational\nagent, etc. It does not imply any causal relationship, influence,\nintentionality, etc."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://linkedevents.org/ontology/Event"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://linkedevents.org/ontology/"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "involved agent"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@language" : "en",
-    "@value" : "an agent involved in an event."
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/abstract",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -371,7 +268,7 @@
   "@id" : "https://change-detection-ontology.adaptcentre.ie/#DatatypeSourceData",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Datatype has been changed in the source data"
+    "@value" : "Datatype has been changed in the source data."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://change-detection-ontology.adaptcentre.ie/#"
@@ -381,15 +278,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://linkedevents.org/ontology/Event"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData"
-  }, {
-    "@id" : "https://change-detection-ontology.adaptcentre.ie/#InsertSourceData"
-  }, {
-    "@id" : "https://change-detection-ontology.adaptcentre.ie/#MergeSourceData"
-  }, {
-    "@id" : "https://change-detection-ontology.adaptcentre.ie/#MoveSourceData"
   } ]
 }, {
   "@id" : "https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData",
@@ -470,7 +358,7 @@
   "@id" : "https://change-detection-ontology.adaptcentre.ie/#hasEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "An event within a certain event log"
+    "@value" : "An event within a certain event log."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://change-detection-ontology.adaptcentre.ie/#ChangeLog"
@@ -488,7 +376,7 @@
   "@id" : "https://change-detection-ontology.adaptcentre.ie/#hasOwner",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The owner of the event log"
+    "@value" : "The owner of the event log."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://change-detection-ontology.adaptcentre.ie/#ChangeLog"
@@ -515,7 +403,7 @@
   "@id" : "https://change-detection-ontology.adaptcentre.ie/#inEventLog",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "An event within an event log"
+    "@value" : "An event within an event log."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://linkedevents.org/ontology/Event"
@@ -530,7 +418,7 @@
   "@id" : "https://change-detection-ontology.adaptcentre.ie/#ownedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The agent who owns the change log"
+    "@value" : "The agent who owns the change log."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "ownedBy"
