@@ -328,7 +328,9 @@
 <http://www.example.org/deleteChangeConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.example.org/deleteChangeConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> .
 <http://www.example.org/deleteChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#predicate> <https://change-detection-ontology.adaptcentre.ie/#hasThreshold> .
+<https://change-detection-ontology.adaptcentre.ie/#hasThreshold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.example.org/deleteChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#subject> <https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData> .
+<https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.example.org/deleteChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#object> "5" .
 # 
 # http://www.example.org/insertChangeConstraint
@@ -336,16 +338,14 @@
 <http://www.example.org/insertChangeConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> .
 <http://www.example.org/insertChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#predicate> <https://change-detection-ontology.adaptcentre.ie/#hasThreshold> .
 <http://www.example.org/insertChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#subject> <https://change-detection-ontology.adaptcentre.ie/#InsertSourceData> .
+<https://change-detection-ontology.adaptcentre.ie/#InsertSourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.example.org/insertChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#object> "0" .
 # 
 # https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData
-<https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 # 
 # https://change-detection-ontology.adaptcentre.ie/#InsertSourceData
-<https://change-detection-ontology.adaptcentre.ie/#InsertSourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 # 
 # https://change-detection-ontology.adaptcentre.ie/#hasThreshold
-<https://change-detection-ontology.adaptcentre.ie/#hasThreshold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 # 
 # 
 # 
