@@ -75,6 +75,10 @@ The ontology allows a notification policy to be defined to notify users when a t
 <http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#object
+<http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#object> rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#action
 <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#action> rdf:type owl:AnnotationProperty .
 
@@ -100,14 +104,6 @@ The ontology allows a notification policy to be defined to notify users when a t
 
 
 #################################################################
-#    Datatypes
-#################################################################
-
-###  http://www.w3.org/2001/XMLSchema#date
-xsd:date rdf:type rdfs:Datatype .
-
-
-#################################################################
 #    Object Properties
 #################################################################
 
@@ -117,6 +113,7 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:domain :ChangeLog ;
           rdfs:range <http://linkedevents.org/ontology/Event> ;
           rdfs:comment "An event within a certain event log." ;
+          rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
           rdfs:label "hasEvent" .
 
 
@@ -126,6 +123,7 @@ xsd:date rdf:type rdfs:Datatype .
           rdfs:domain :ChangeLog ;
           rdfs:range <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
           rdfs:comment "The owner of the event log." ;
+          rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
           rdfs:label "hasOwner" .
 
 
@@ -134,12 +132,14 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:domain <http://linkedevents.org/ontology/Event> ;
             rdfs:range :ChangeLog ;
             rdfs:comment "An event within an event log." ;
+            rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
             rdfs:label "inEventLog" .
 
 
 ###  https://change-detection-ontology.adaptcentre.ie/#ownedBy
 :ownedBy rdf:type owl:ObjectProperty ;
          rdfs:comment "The agent who owns the change log." ;
+         rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
          rdfs:label "ownedBy" .
 
 
@@ -151,11 +151,40 @@ xsd:date rdf:type rdfs:Datatype .
 <http://www.w3.org/2006/time#inXSDDateTimeStamp> rdf:type owl:DatatypeProperty .
 
 
+###  https://change-detection-ontology.adaptcentre.ie/#detectionEnd
+:detectionEnd rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy> ;
+              rdfs:range xsd:dateTime ;
+              rdfs:comment "The time when the notification policy is finished." ;
+              rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
+              rdfs:label "detectionEnd" .
+
+
+###  https://change-detection-ontology.adaptcentre.ie/#detectionStart
+:detectionStart rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy> ;
+                rdfs:range xsd:dateTime ;
+                rdfs:comment "The time when the notification policy was created." ;
+                rdfs:label "detectionStart" .
+
+
 ###  https://change-detection-ontology.adaptcentre.ie/#hasReason
 :hasReason rdf:type owl:DatatypeProperty ,
                     owl:FunctionalProperty ;
            rdfs:domain <http://linkedevents.org/ontology/Event> ;
-           rdfs:range xsd:string .
+           rdfs:range xsd:string ;
+           rdfs:comment "The reason a change occurred." ;
+           rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
+           rdfs:label "hasReason" .
+
+
+###  https://change-detection-ontology.adaptcentre.ie/#hasThreshold
+:hasThreshold rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> ;
+              rdfs:range xsd:int .
 
 
 #################################################################
@@ -215,18 +244,12 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData
 :DeleteSourceData rdf:type owl:Class ;
-                  rdfs:subClassOf <http://linkedevents.org/ontology/Event> ;
-                  rdfs:comment "Data has been removed within the source data." ;
-                  rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
-                  rdfs:label "DeleteSourceData" .
+                  rdfs:subClassOf <http://linkedevents.org/ontology/Event> .
 
 
 ###  https://change-detection-ontology.adaptcentre.ie/#InsertSourceData
 :InsertSourceData rdf:type owl:Class ;
-                  rdfs:subClassOf <http://linkedevents.org/ontology/Event> ;
-                  rdfs:comment "Data has been inserted within the source data." ;
-                  rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
-                  rdfs:label "InsertSourceData" .
+                  rdfs:subClassOf <http://linkedevents.org/ontology/Event> .
 
 
 ###  https://change-detection-ontology.adaptcentre.ie/#MergeSourceData
@@ -297,13 +320,18 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://example.org/notificationConstraint
 <http://example.org/notificationConstraint> rdf:type owl:NamedIndividual ,
-                                                     <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> .
+                                                     <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#And> ,
+                                                     <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> ;
+                                            <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#first> <http://www.example.org/insertChangeConstraint> ;
+                                            <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#second> <http://www.example.org/deleteChangeConstraint> .
 
 
 ###  http://example.org/notificationPolicy
 <http://example.org/notificationPolicy> rdf:type owl:NamedIndividual ,
                                                  <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy> ;
-                                        <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#grants> <http://example.org/policyObligation> .
+                                        <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#grants> <http://example.org/policyObligation> ;
+                                        :detectionEnd "2022-05-17 00:00:00.0000"^^xsd:dateTime ;
+                                        :detectionStart "2022-05-20 15:46:14.855752"^^xsd:dateTime .
 
 
 ###  http://example.org/policyObligation
@@ -336,6 +364,53 @@ xsd:date rdf:type rdfs:Datatype .
 <http://example.org/userAgent> rdf:type owl:NamedIndividual ,
                                         <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiEntity.owl#Agent> ,
                                         <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> .
+
+
+###  http://www.example.org/deleteChangeConstraint
+<http://www.example.org/deleteChangeConstraint> rdf:type owl:NamedIndividual ,
+                                                         <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> ;
+                                                <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#predicate> :hasThreshold ;
+                                                <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#subject> :DeleteSourceData ;
+                                                <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#object> "5" .
+
+
+###  http://www.example.org/insertChangeConstraint
+<http://www.example.org/insertChangeConstraint> rdf:type owl:NamedIndividual ,
+                                                         <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> ;
+                                                <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#predicate> :hasThreshold ;
+                                                <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#subject> :InsertSourceData ;
+                                                <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#object> "0" .
+
+
+###  https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData
+:DeleteSourceData rdf:type owl:NamedIndividual .
+
+
+###  https://change-detection-ontology.adaptcentre.ie/#InsertSourceData
+:InsertSourceData rdf:type owl:NamedIndividual .
+
+
+###  https://change-detection-ontology.adaptcentre.ie/#hasThreshold
+:hasThreshold rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:DeleteSourceData rdfs:comment "Data has been removed within the source data." ;
+                  rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
+                  rdfs:label "DeleteSourceData" .
+
+
+:InsertSourceData rdfs:comment "Data has been inserted within the source data." ;
+                  rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
+                  rdfs:label "InsertSourceData" .
+
+
+:hasThreshold rdfs:comment "The threshold defined for a change type within the notification policy." ;
+              rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
+              rdfs:label "hasThreshold" .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
