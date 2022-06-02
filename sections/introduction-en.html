@@ -1,7 +1,7 @@
 <h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 
 The Change Detection ontology represents changes that have occured in the source data which has created Linked data.
-Each change is represented as an event <font face="courier-new,  monospace">(lode:Event)</font> which is specific to the change that has occured. 
+The ontology extends the <a href="https://linkedevents.org/ontology/">Lode</a>.  ontology to represent changes. Each change is represented as an event <font face="courier-new,  monospace">(lode:Event)</font> which is specific to the change that has occured. 
 A change is characterised based on the action which caused it. 
 For example, if data has been deleted from the source data, the change will be represented as a deletion change <font face="courier-new,  monospace">(cdo:DeleteSourceData)</font>
 Changes are grouped into change logs <font face="courier-new,  monospace">(cdo:ChangeLog)</font> which relates to a specific source data and owner <font face="courier-new,  monospace">(cdo:hasOwner)</font>. 
