@@ -5,6 +5,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:time="http://www.w3.org/2006/time#"
@@ -131,10 +132,38 @@ The ontology allows a notification policy to be defined to notify users when a t
     
 
 
+    <!-- http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#fifth -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#fifth"/>
+    
+
+
+    <!-- http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#fourth -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#fourth"/>
+    
+
+
     <!-- http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#object -->
 
 
     <owl:AnnotationProperty rdf:about="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#object"/>
+    
+
+
+    <!-- http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#sixth -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#sixth"/>
+    
+
+
+    <!-- http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#third -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#third"/>
     
 
 
@@ -159,6 +188,13 @@ The ontology allows a notification policy to be defined to notify users when a t
     
 
 
+    <!-- http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#actor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#actor"/>
+    
+
+
     <!-- http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#desc -->
 
 
@@ -177,6 +213,34 @@ The ontology allows a notification policy to be defined to notify users when a t
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/mbox -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/mbox"/>
+    
+
+
+    <!-- https://change-detection-ontology.adaptcentre.ie/#hasChange -->
+
+
+    <owl:AnnotationProperty rdf:about="https://change-detection-ontology.adaptcentre.ie/#hasChange"/>
+    
+
+
+    <!-- https://change-detection-ontology.adaptcentre.ie/#hasCurrentVersion -->
+
+
+    <owl:AnnotationProperty rdf:about="https://change-detection-ontology.adaptcentre.ie/#hasCurrentVersion"/>
+    
+
+
+    <!-- https://change-detection-ontology.adaptcentre.ie/#hasPreviousVersion -->
+
+
+    <owl:AnnotationProperty rdf:about="https://change-detection-ontology.adaptcentre.ie/#hasPreviousVersion"/>
     
 
 
@@ -390,6 +454,13 @@ The ontology allows a notification policy to be defined to notify users when a t
     
 
 
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
     <!-- https://change-detection-ontology.adaptcentre.ie/#ChangeLog -->
 
 
@@ -406,9 +477,6 @@ The ontology allows a notification policy to be defined to notify users when a t
 
     <owl:Class rdf:about="https://change-detection-ontology.adaptcentre.ie/#DatatypeSourceData">
         <rdfs:subClassOf rdf:resource="http://linkedevents.org/ontology/Event"/>
-        <rdfs:comment>Datatype has been changed in the source data.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
-        <rdfs:label>DatatypeSourceData</rdfs:label>
     </owl:Class>
     
 
@@ -436,9 +504,6 @@ The ontology allows a notification policy to be defined to notify users when a t
 
     <owl:Class rdf:about="https://change-detection-ontology.adaptcentre.ie/#MergeSourceData">
         <rdfs:subClassOf rdf:resource="http://linkedevents.org/ontology/Event"/>
-        <rdfs:comment>Data has been merged within the source data.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
-        <rdfs:label>MergeSourceData</rdfs:label>
     </owl:Class>
     
 
@@ -448,9 +513,6 @@ The ontology allows a notification policy to be defined to notify users when a t
 
     <owl:Class rdf:about="https://change-detection-ontology.adaptcentre.ie/#MoveSourceData">
         <rdfs:subClassOf rdf:resource="http://linkedevents.org/ontology/Event"/>
-        <rdfs:comment>Data has been moved within the source data.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
-        <rdfs:label>MoveSourceData</rdfs:label>
     </owl:Class>
     
 
@@ -460,9 +522,6 @@ The ontology allows a notification policy to be defined to notify users when a t
 
     <owl:Class rdf:about="https://change-detection-ontology.adaptcentre.ie/#UpdateSourceData">
         <rdfs:subClassOf rdf:resource="http://linkedevents.org/ontology/Event"/>
-        <rdfs:comment>Data has been updated within the source data.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
-        <rdfs:label>UpdateSourceData</rdfs:label>
     </owl:Class>
     
 
@@ -479,161 +538,169 @@ The ontology allows a notification policy to be defined to notify users when a t
     
 
 
-    <!-- http://example.org/changeLog -->
+    <!-- http://www.example.com/changeLog -->
 
 
-    <owl:NamedIndividual rdf:about="http://example.org/changeLog">
+    <owl:NamedIndividual rdf:about="http://www.example.com/changeLog">
         <rdf:type rdf:resource="https://change-detection-ontology.adaptcentre.ie/#ChangeLog"/>
-        <hasEvent rdf:resource="http://example.org/insertEvent1"/>
-        <hasEvent rdf:resource="http://example.org/insertEvent2"/>
+        <hasChange rdf:resource="http://www.example.com/insertChange"/>
+        <hasCurrentVersion rdf:resource="https://raw.githubusercontent.com/alex-randles/Change-Detection-System-Examples/main/version_2_files/student.csv"/>
+        <hasPreviousVersion rdf:resource="https://raw.githubusercontent.com/alex-randles/Change-Detection-System-Examples/main/version_1_files/student.csv"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://example.org/detectionTime -->
+    <!-- http://www.example.com/datatypeChangeConstraint -->
 
 
-    <owl:NamedIndividual rdf:about="http://example.org/detectionTime">
-        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
-        <time:inXSDDateTimeStamp>2004-04-12T13:20:00Z</time:inXSDDateTimeStamp>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/eventLog -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/eventLog">
-        <rdf:type rdf:resource="https://change-detection-ontology.adaptcentre.ie/#ChangeLog"/>
-        <hasEvent rdf:resource="http://example.org/insertEvent1"/>
-        <hasEvent rdf:resource="http://example.org/insertEvent2"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/insertEvent1 -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/insertEvent1">
-        <rdf:type rdf:resource="https://change-detection-ontology.adaptcentre.ie/#InsertSourceData"/>
-        <hasReason>Value &apos;12&apos; inserted into &apos;ID&apos; element.</hasReason>
-        <ontology:atPlace rdf:resource="http://example.org/sourceData"/>
-        <ontology:atTime rdf:resource="http://example.org/detectionTime"/>
-        <ontology:involvedAgent rdf:resource="http://example.org/userAgent"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/insertEvent2 -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/insertEvent2">
-        <rdf:type rdf:resource="https://change-detection-ontology.adaptcentre.ie/#InsertSourceData"/>
-        <hasReason>Value &apos;23&apos; inserted into &apos;ID&apos; element</hasReason>
-        <ontology:atPlace rdf:resource="http://example.org/sourceData"/>
-        <ontology:atTime rdf:resource="http://example.org/detectionTime"/>
-        <ontology:involvedAgent rdf:resource="http://example.org/userAgent"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/notificationConstraint -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/notificationConstraint">
-        <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#And"/>
+    <owl:NamedIndividual rdf:about="http://www.example.com/datatypeChangeConstraint">
         <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint"/>
-        <ReiConstraint:first rdf:resource="http://www.example.org/insertChangeConstraint"/>
-        <ReiConstraint:second rdf:resource="http://www.example.org/deleteChangeConstraint"/>
+        <ReiConstraint:predicate rdf:resource="https://change-detection-ontology.adaptcentre.ie/#hasThreshold"/>
+        <ReiConstraint:subject rdf:resource="https://change-detection-ontology.adaptcentre.ie/#DatatypeSourceData"/>
+        <ReiConstraint:object>0</ReiConstraint:object>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://example.org/notificationPolicy -->
+    <!-- http://www.example.com/deleteChangeConstraint -->
 
 
-    <owl:NamedIndividual rdf:about="http://example.org/notificationPolicy">
-        <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy"/>
-        <ReiPolicy:grants rdf:resource="http://example.org/policyObligation"/>
-        <detectionEnd rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-17 00:00:00.0000</detectionEnd>
-        <detectionStart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-20 15:46:14.855752</detectionStart>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/policyObligation -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/policyObligation">
-        <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#Obligation"/>
-        <ReiDeontic:action rdf:resource="http://example.org/sendNotificationAction"/>
-        <ReiDeontic:actor rdf:resource="http://example.org/softwareAgent"/>
-        <ReiDeontic:actor rdf:resource="http://example.org/userAgent"/>
-        <ReiDeontic:startingConstraint rdf:resource="http://example.org/notificationConstraint"/>
-        <ReiPolicy:desc>Obligation to send notification when threshold satisified</ReiPolicy:desc>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/sendNotificationAction -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/sendNotificationAction">
-        <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiAction.owl#Action"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/softwareAgent -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/softwareAgent">
-        <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiEntity.owl#Agent"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/sourceData -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/sourceData">
-        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place"/>
-        <ontology:atPlace rdf:resource="http://example.org/sourceData"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/userAgent -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/userAgent">
-        <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiEntity.owl#Agent"/>
-        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.example.org/deleteChangeConstraint -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.example.org/deleteChangeConstraint">
+    <owl:NamedIndividual rdf:about="http://www.example.com/deleteChangeConstraint">
         <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint"/>
         <ReiConstraint:predicate rdf:resource="https://change-detection-ontology.adaptcentre.ie/#hasThreshold"/>
         <ReiConstraint:subject rdf:resource="https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData"/>
-        <ReiConstraint:object>5</ReiConstraint:object>
+        <ReiConstraint:object>0</ReiConstraint:object>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.org/insertChangeConstraint -->
+    <!-- http://www.example.com/detectionTime -->
 
 
-    <owl:NamedIndividual rdf:about="http://www.example.org/insertChangeConstraint">
+    <owl:NamedIndividual rdf:about="http://www.example.com/detectionTime">
+        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2022-07-05 17:12:57.090772</time:inXSDDateTimeStamp>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/insertChange -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/insertChange">
+        <rdf:type rdf:resource="https://change-detection-ontology.adaptcentre.ie/#InsertSourceData"/>
+        <hasReason>Name: Alex Randles</hasReason>
+        <ontology:atTime rdf:resource="http://www.example.com/detectionTime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/insertChangeConstraint -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/insertChangeConstraint">
         <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint"/>
         <ReiConstraint:predicate rdf:resource="https://change-detection-ontology.adaptcentre.ie/#hasThreshold"/>
         <ReiConstraint:subject rdf:resource="https://change-detection-ontology.adaptcentre.ie/#InsertSourceData"/>
         <ReiConstraint:object>0</ReiConstraint:object>
     </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/mergeChangeConstraint -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/mergeChangeConstraint">
+        <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint"/>
+        <ReiConstraint:predicate rdf:resource="https://change-detection-ontology.adaptcentre.ie/#hasThreshold"/>
+        <ReiConstraint:subject rdf:resource="https://change-detection-ontology.adaptcentre.ie/#MergeSourceData"/>
+        <ReiConstraint:object>0</ReiConstraint:object>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/moveChangeConstraint -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/moveChangeConstraint">
+        <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint"/>
+        <ReiConstraint:predicate rdf:resource="https://change-detection-ontology.adaptcentre.ie/#hasThreshold"/>
+        <ReiConstraint:subject rdf:resource="https://change-detection-ontology.adaptcentre.ie/#MoveSourceData"/>
+        <ReiConstraint:object>0</ReiConstraint:object>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/notificationConstraint -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/notificationConstraint">
+        <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#And"/>
+        <ReiConstraint:first rdf:resource="http://www.example.com/insertChangeConstraint"/>
+        <ReiConstraint:second rdf:resource="http://www.example.com/deleteChangeConstraint"/>
+        <ReiConstraint:fifth rdf:resource="http://www.example.com/mergeChangeConstraint"/>
+        <ReiConstraint:fourth rdf:resource="http://www.example.com/updateChangeConstraint"/>
+        <ReiConstraint:sixth rdf:resource="http://www.example.com/datatypeChangeConstraint"/>
+        <ReiConstraint:third rdf:resource="http://www.example.com/moveChangeConstraint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/notificationPolicy -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/notificationPolicy">
+        <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy"/>
+        <ReiPolicy:grants rdf:resource="http://www.example.com/policyObligation"/>
+        <time:inXSDDateTimeStamp rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2022-08-07 00:00:00.0000</time:inXSDDateTimeStamp>
+        <detectionEnd rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-08-07 00:00:00.0000</detectionEnd>
+        <detectionStart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-07-05 17:12:56.121344</detectionStart>
+        <ReiPolicy:desc>Notification policy for user 1</ReiPolicy:desc>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/policyObligation -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/policyObligation">
+        <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#Obligation"/>
+        <ReiDeontic:action rdf:resource="https://change-detection-ontology.adaptcentre.ie/#sendNotification"/>
+        <ReiDeontic:obligedTo rdf:resource="https://change-detection-ontology.adaptcentre.ie/#softwareAgent"/>
+        <ReiDeontic:startingConstraint rdf:resource="http://www.example.com/notificationConstraint"/>
+        <ReiPolicy:actor rdf:resource="http://www.example.com/userActor"/>
+        <ReiPolicy:actor rdf:resource="https://change-detection-ontology.adaptcentre.ie/#softwareAgent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/updateChangeConstraint -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/updateChangeConstraint">
+        <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint"/>
+        <ReiConstraint:predicate rdf:resource="https://change-detection-ontology.adaptcentre.ie/#hasThreshold"/>
+        <ReiConstraint:subject rdf:resource="https://change-detection-ontology.adaptcentre.ie/#UpdateSourceData"/>
+        <ReiConstraint:object>0</ReiConstraint:object>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.example.com/userActor -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.example.com/userActor">
+        <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiEntity.owl#Agent"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:mbox>alexrandles0@gmail.com</foaf:mbox>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://change-detection-ontology.adaptcentre.ie/#DatatypeSourceData -->
+
+
+    <owl:NamedIndividual rdf:about="https://change-detection-ontology.adaptcentre.ie/#DatatypeSourceData"/>
     
 
 
@@ -651,10 +718,45 @@ The ontology allows a notification policy to be defined to notify users when a t
     
 
 
+    <!-- https://change-detection-ontology.adaptcentre.ie/#MergeSourceData -->
+
+
+    <owl:NamedIndividual rdf:about="https://change-detection-ontology.adaptcentre.ie/#MergeSourceData"/>
+    
+
+
+    <!-- https://change-detection-ontology.adaptcentre.ie/#MoveSourceData -->
+
+
+    <owl:NamedIndividual rdf:about="https://change-detection-ontology.adaptcentre.ie/#MoveSourceData"/>
+    
+
+
+    <!-- https://change-detection-ontology.adaptcentre.ie/#UpdateSourceData -->
+
+
+    <owl:NamedIndividual rdf:about="https://change-detection-ontology.adaptcentre.ie/#UpdateSourceData"/>
+    
+
+
     <!-- https://change-detection-ontology.adaptcentre.ie/#hasThreshold -->
 
 
     <owl:NamedIndividual rdf:about="https://change-detection-ontology.adaptcentre.ie/#hasThreshold"/>
+    
+
+
+    <!-- https://change-detection-ontology.adaptcentre.ie/#sendNotification -->
+
+
+    <owl:NamedIndividual rdf:about="https://change-detection-ontology.adaptcentre.ie/#sendNotification"/>
+    
+
+
+    <!-- https://change-detection-ontology.adaptcentre.ie/#softwareAgent -->
+
+
+    <owl:NamedIndividual rdf:about="https://change-detection-ontology.adaptcentre.ie/#softwareAgent"/>
     
 
 
@@ -667,6 +769,11 @@ The ontology allows a notification policy to be defined to notify users when a t
      -->
 
 
+    <rdf:Description rdf:about="https://change-detection-ontology.adaptcentre.ie/#DatatypeSourceData">
+        <rdfs:comment>Datatype has been changed in the source data.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
+        <rdfs:label>DatatypeSourceData</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData">
         <rdfs:comment>Data has been removed within the source data.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
@@ -676,6 +783,21 @@ The ontology allows a notification policy to be defined to notify users when a t
         <rdfs:comment>Data has been inserted within the source data.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
         <rdfs:label>InsertSourceData</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://change-detection-ontology.adaptcentre.ie/#MergeSourceData">
+        <rdfs:comment>Data has been merged within the source data.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
+        <rdfs:label>MergeSourceData</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://change-detection-ontology.adaptcentre.ie/#MoveSourceData">
+        <rdfs:comment>Data has been moved within the source data.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
+        <rdfs:label>MoveSourceData</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://change-detection-ontology.adaptcentre.ie/#UpdateSourceData">
+        <rdfs:comment>Data has been updated within the source data.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
+        <rdfs:label>UpdateSourceData</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://change-detection-ontology.adaptcentre.ie/#hasThreshold">
         <rdfs:comment>The threshold defined for a change type within the notification policy.</rdfs:comment>

@@ -57,8 +57,20 @@
 # http://purl.org/vocab/vann/preferredNamespaceUri
 <http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#fifth
+<http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#fifth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#fourth
+<http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#fourth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#object
 <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#sixth
+<http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#sixth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#third
+<http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#third> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#action
 <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -69,6 +81,9 @@
 # http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#startingConstraint
 <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#startingConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#actor
+<http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#actor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#desc
 <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#desc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -77,6 +92,18 @@
 # 
 # http://www.w3.org/2004/02/skos/core#definition
 <http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/mbox
+<http://xmlns.com/foaf/0.1/mbox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://change-detection-ontology.adaptcentre.ie/#hasChange
+<https://change-detection-ontology.adaptcentre.ie/#hasChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://change-detection-ontology.adaptcentre.ie/#hasCurrentVersion
+<https://change-detection-ontology.adaptcentre.ie/#hasCurrentVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://change-detection-ontology.adaptcentre.ie/#hasPreviousVersion
+<https://change-detection-ontology.adaptcentre.ie/#hasPreviousVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 
@@ -199,6 +226,9 @@
 # http://www.w3.org/2006/time#TemporalEntity
 <http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
+# http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # https://change-detection-ontology.adaptcentre.ie/#ChangeLog
 <https://change-detection-ontology.adaptcentre.ie/#ChangeLog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://change-detection-ontology.adaptcentre.ie/#ChangeLog> <http://www.w3.org/2000/01/rdf-schema#comment> "A grouping of changes that have occured relating to a specific source data." .
@@ -208,9 +238,6 @@
 # https://change-detection-ontology.adaptcentre.ie/#DatatypeSourceData
 <https://change-detection-ontology.adaptcentre.ie/#DatatypeSourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://change-detection-ontology.adaptcentre.ie/#DatatypeSourceData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedevents.org/ontology/Event> .
-<https://change-detection-ontology.adaptcentre.ie/#DatatypeSourceData> <http://www.w3.org/2000/01/rdf-schema#comment> "Datatype has been changed in the source data." .
-<https://change-detection-ontology.adaptcentre.ie/#DatatypeSourceData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://change-detection-ontology.adaptcentre.ie/#> .
-<https://change-detection-ontology.adaptcentre.ie/#DatatypeSourceData> <http://www.w3.org/2000/01/rdf-schema#label> "DatatypeSourceData" .
 # 
 # https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData
 <https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -223,23 +250,14 @@
 # https://change-detection-ontology.adaptcentre.ie/#MergeSourceData
 <https://change-detection-ontology.adaptcentre.ie/#MergeSourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://change-detection-ontology.adaptcentre.ie/#MergeSourceData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedevents.org/ontology/Event> .
-<https://change-detection-ontology.adaptcentre.ie/#MergeSourceData> <http://www.w3.org/2000/01/rdf-schema#comment> "Data has been merged within the source data." .
-<https://change-detection-ontology.adaptcentre.ie/#MergeSourceData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://change-detection-ontology.adaptcentre.ie/#> .
-<https://change-detection-ontology.adaptcentre.ie/#MergeSourceData> <http://www.w3.org/2000/01/rdf-schema#label> "MergeSourceData" .
 # 
 # https://change-detection-ontology.adaptcentre.ie/#MoveSourceData
 <https://change-detection-ontology.adaptcentre.ie/#MoveSourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://change-detection-ontology.adaptcentre.ie/#MoveSourceData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedevents.org/ontology/Event> .
-<https://change-detection-ontology.adaptcentre.ie/#MoveSourceData> <http://www.w3.org/2000/01/rdf-schema#comment> "Data has been moved within the source data." .
-<https://change-detection-ontology.adaptcentre.ie/#MoveSourceData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://change-detection-ontology.adaptcentre.ie/#> .
-<https://change-detection-ontology.adaptcentre.ie/#MoveSourceData> <http://www.w3.org/2000/01/rdf-schema#label> "MoveSourceData" .
 # 
 # https://change-detection-ontology.adaptcentre.ie/#UpdateSourceData
 <https://change-detection-ontology.adaptcentre.ie/#UpdateSourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://change-detection-ontology.adaptcentre.ie/#UpdateSourceData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedevents.org/ontology/Event> .
-<https://change-detection-ontology.adaptcentre.ie/#UpdateSourceData> <http://www.w3.org/2000/01/rdf-schema#comment> "Data has been updated within the source data." .
-<https://change-detection-ontology.adaptcentre.ie/#UpdateSourceData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://change-detection-ontology.adaptcentre.ie/#> .
-<https://change-detection-ontology.adaptcentre.ie/#UpdateSourceData> <http://www.w3.org/2000/01/rdf-schema#label> "UpdateSourceData" .
 # 
 # 
 # 
@@ -250,102 +268,126 @@
 # #################################################################
 # 
 # 
-# http://example.org/changeLog
-<http://example.org/changeLog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://example.org/changeLog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://change-detection-ontology.adaptcentre.ie/#ChangeLog> .
-<http://example.org/changeLog> <https://change-detection-ontology.adaptcentre.ie/#hasEvent> <http://example.org/insertEvent1> .
-<http://example.org/changeLog> <https://change-detection-ontology.adaptcentre.ie/#hasEvent> <http://example.org/insertEvent2> .
+# http://www.example.com/changeLog
+<http://www.example.com/changeLog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.com/changeLog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://change-detection-ontology.adaptcentre.ie/#ChangeLog> .
+<http://www.example.com/changeLog> <https://change-detection-ontology.adaptcentre.ie/#hasChange> <http://www.example.com/insertChange> .
+<http://www.example.com/changeLog> <https://change-detection-ontology.adaptcentre.ie/#hasCurrentVersion> <https://raw.githubusercontent.com/alex-randles/Change-Detection-System-Examples/main/version_2_files/student.csv> .
+<http://www.example.com/changeLog> <https://change-detection-ontology.adaptcentre.ie/#hasPreviousVersion> <https://raw.githubusercontent.com/alex-randles/Change-Detection-System-Examples/main/version_1_files/student.csv> .
 # 
-# http://example.org/detectionTime
-<http://example.org/detectionTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://example.org/detectionTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
-<http://example.org/detectionTime> <http://www.w3.org/2006/time#inXSDDateTimeStamp> "2004-04-12T13:20:00Z" .
-# 
-# http://example.org/eventLog
-<http://example.org/eventLog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://example.org/eventLog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://change-detection-ontology.adaptcentre.ie/#ChangeLog> .
-<http://example.org/eventLog> <https://change-detection-ontology.adaptcentre.ie/#hasEvent> <http://example.org/insertEvent1> .
-<http://example.org/eventLog> <https://change-detection-ontology.adaptcentre.ie/#hasEvent> <http://example.org/insertEvent2> .
-# 
-# http://example.org/insertEvent1
-<http://example.org/insertEvent1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://example.org/insertEvent1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://change-detection-ontology.adaptcentre.ie/#InsertSourceData> .
-<http://example.org/insertEvent1> <https://change-detection-ontology.adaptcentre.ie/#hasReason> "Value '12' inserted into 'ID' element." .
-<http://example.org/insertEvent1> <http://linkedevents.org/ontology/atPlace> <http://example.org/sourceData> .
-<http://example.org/insertEvent1> <http://linkedevents.org/ontology/atTime> <http://example.org/detectionTime> .
-<http://example.org/insertEvent1> <http://linkedevents.org/ontology/involvedAgent> <http://example.org/userAgent> .
-# 
-# http://example.org/insertEvent2
-<http://example.org/insertEvent2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://example.org/insertEvent2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://change-detection-ontology.adaptcentre.ie/#InsertSourceData> .
-<http://example.org/insertEvent2> <https://change-detection-ontology.adaptcentre.ie/#hasReason> "Value '23' inserted into 'ID' element" .
-<http://example.org/insertEvent2> <http://linkedevents.org/ontology/atPlace> <http://example.org/sourceData> .
-<http://example.org/insertEvent2> <http://linkedevents.org/ontology/atTime> <http://example.org/detectionTime> .
-<http://example.org/insertEvent2> <http://linkedevents.org/ontology/involvedAgent> <http://example.org/userAgent> .
-# 
-# http://example.org/notificationConstraint
-<http://example.org/notificationConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://example.org/notificationConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#And> .
-<http://example.org/notificationConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> .
-<http://example.org/notificationConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#first> <http://www.example.org/insertChangeConstraint> .
-<http://example.org/notificationConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#second> <http://www.example.org/deleteChangeConstraint> .
-# 
-# http://example.org/notificationPolicy
-<http://example.org/notificationPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://example.org/notificationPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy> .
-<http://example.org/notificationPolicy> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#grants> <http://example.org/policyObligation> .
-<http://example.org/notificationPolicy> <https://change-detection-ontology.adaptcentre.ie/#detectionEnd> "2022-05-17 00:00:00.0000"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<http://example.org/notificationPolicy> <https://change-detection-ontology.adaptcentre.ie/#detectionStart> "2022-05-20 15:46:14.855752"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-# 
-# http://example.org/policyObligation
-<http://example.org/policyObligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://example.org/policyObligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#Obligation> .
-<http://example.org/policyObligation> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#action> <http://example.org/sendNotificationAction> .
-<http://example.org/policyObligation> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#actor> <http://example.org/softwareAgent> .
-<http://example.org/policyObligation> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#actor> <http://example.org/userAgent> .
-<http://example.org/policyObligation> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#startingConstraint> <http://example.org/notificationConstraint> .
-<http://example.org/policyObligation> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#desc> "Obligation to send notification when threshold satisified" .
-# 
-# http://example.org/sendNotificationAction
-<http://example.org/sendNotificationAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://example.org/sendNotificationAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiAction.owl#Action> .
-# 
-# http://example.org/softwareAgent
-<http://example.org/softwareAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://example.org/softwareAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiEntity.owl#Agent> .
-# 
-# http://example.org/sourceData
-<http://example.org/sourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://example.org/sourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place> .
-<http://example.org/sourceData> <http://linkedevents.org/ontology/atPlace> <http://example.org/sourceData> .
-# 
-# http://example.org/userAgent
-<http://example.org/userAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://example.org/userAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiEntity.owl#Agent> .
-<http://example.org/userAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> .
-# 
-# http://www.example.org/deleteChangeConstraint
-<http://www.example.org/deleteChangeConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.example.org/deleteChangeConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> .
-<http://www.example.org/deleteChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#predicate> <https://change-detection-ontology.adaptcentre.ie/#hasThreshold> .
+# http://www.example.com/datatypeChangeConstraint
+<http://www.example.com/datatypeChangeConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.com/datatypeChangeConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> .
+<http://www.example.com/datatypeChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#predicate> <https://change-detection-ontology.adaptcentre.ie/#hasThreshold> .
 <https://change-detection-ontology.adaptcentre.ie/#hasThreshold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.example.org/deleteChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#subject> <https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData> .
-<https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.example.org/deleteChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#object> "5" .
+<http://www.example.com/datatypeChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#subject> <https://change-detection-ontology.adaptcentre.ie/#DatatypeSourceData> .
+<https://change-detection-ontology.adaptcentre.ie/#DatatypeSourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.com/datatypeChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#object> "0" .
 # 
-# http://www.example.org/insertChangeConstraint
-<http://www.example.org/insertChangeConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.example.org/insertChangeConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> .
-<http://www.example.org/insertChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#predicate> <https://change-detection-ontology.adaptcentre.ie/#hasThreshold> .
-<http://www.example.org/insertChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#subject> <https://change-detection-ontology.adaptcentre.ie/#InsertSourceData> .
+# http://www.example.com/deleteChangeConstraint
+<http://www.example.com/deleteChangeConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.com/deleteChangeConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> .
+<http://www.example.com/deleteChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#predicate> <https://change-detection-ontology.adaptcentre.ie/#hasThreshold> .
+<http://www.example.com/deleteChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#subject> <https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData> .
+<https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.com/deleteChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#object> "0" .
+# 
+# http://www.example.com/detectionTime
+<http://www.example.com/detectionTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.com/detectionTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/time#Instant> .
+<http://www.example.com/detectionTime> <http://www.w3.org/2006/time#inXSDDateTimeStamp> "2022-07-05 17:12:57.090772"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+# 
+# http://www.example.com/insertChange
+<http://www.example.com/insertChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.com/insertChange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://change-detection-ontology.adaptcentre.ie/#InsertSourceData> .
+<http://www.example.com/insertChange> <https://change-detection-ontology.adaptcentre.ie/#hasReason> "Name: Alex Randles" .
+<http://www.example.com/insertChange> <http://linkedevents.org/ontology/atTime> <http://www.example.com/detectionTime> .
+# 
+# http://www.example.com/insertChangeConstraint
+<http://www.example.com/insertChangeConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.com/insertChangeConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> .
+<http://www.example.com/insertChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#predicate> <https://change-detection-ontology.adaptcentre.ie/#hasThreshold> .
+<http://www.example.com/insertChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#subject> <https://change-detection-ontology.adaptcentre.ie/#InsertSourceData> .
 <https://change-detection-ontology.adaptcentre.ie/#InsertSourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://www.example.org/insertChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#object> "0" .
+<http://www.example.com/insertChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#object> "0" .
+# 
+# http://www.example.com/mergeChangeConstraint
+<http://www.example.com/mergeChangeConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.com/mergeChangeConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> .
+<http://www.example.com/mergeChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#predicate> <https://change-detection-ontology.adaptcentre.ie/#hasThreshold> .
+<http://www.example.com/mergeChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#subject> <https://change-detection-ontology.adaptcentre.ie/#MergeSourceData> .
+<https://change-detection-ontology.adaptcentre.ie/#MergeSourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.com/mergeChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#object> "0" .
+# 
+# http://www.example.com/moveChangeConstraint
+<http://www.example.com/moveChangeConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.com/moveChangeConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> .
+<http://www.example.com/moveChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#predicate> <https://change-detection-ontology.adaptcentre.ie/#hasThreshold> .
+<http://www.example.com/moveChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#subject> <https://change-detection-ontology.adaptcentre.ie/#MoveSourceData> .
+<https://change-detection-ontology.adaptcentre.ie/#MoveSourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.com/moveChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#object> "0" .
+# 
+# http://www.example.com/notificationConstraint
+<http://www.example.com/notificationConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.com/notificationConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#And> .
+<http://www.example.com/notificationConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#first> <http://www.example.com/insertChangeConstraint> .
+<http://www.example.com/notificationConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#second> <http://www.example.com/deleteChangeConstraint> .
+<http://www.example.com/notificationConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#fifth> <http://www.example.com/mergeChangeConstraint> .
+<http://www.example.com/notificationConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#fourth> <http://www.example.com/updateChangeConstraint> .
+<http://www.example.com/notificationConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#sixth> <http://www.example.com/datatypeChangeConstraint> .
+<http://www.example.com/notificationConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#third> <http://www.example.com/moveChangeConstraint> .
+# 
+# http://www.example.com/notificationPolicy
+<http://www.example.com/notificationPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.com/notificationPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy> .
+<http://www.example.com/notificationPolicy> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#grants> <http://www.example.com/policyObligation> .
+<http://www.example.com/policyObligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.com/notificationPolicy> <http://www.w3.org/2006/time#inXSDDateTimeStamp> "2022-08-07 00:00:00.0000"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://www.example.com/notificationPolicy> <https://change-detection-ontology.adaptcentre.ie/#detectionEnd> "2022-08-07 00:00:00.0000"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.example.com/notificationPolicy> <https://change-detection-ontology.adaptcentre.ie/#detectionStart> "2022-07-05 17:12:56.121344"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.example.com/notificationPolicy> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#desc> "Notification policy for user 1" .
+# 
+# http://www.example.com/policyObligation
+<http://www.example.com/policyObligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#Obligation> .
+<http://www.example.com/policyObligation> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#action> <https://change-detection-ontology.adaptcentre.ie/#sendNotification> .
+<https://change-detection-ontology.adaptcentre.ie/#sendNotification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.com/policyObligation> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#obligedTo> <https://change-detection-ontology.adaptcentre.ie/#softwareAgent> .
+<https://change-detection-ontology.adaptcentre.ie/#softwareAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.com/policyObligation> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#startingConstraint> <http://www.example.com/notificationConstraint> .
+<http://www.example.com/policyObligation> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#actor> <http://www.example.com/userActor> .
+<http://www.example.com/policyObligation> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#actor> <https://change-detection-ontology.adaptcentre.ie/#softwareAgent> .
+# 
+# http://www.example.com/updateChangeConstraint
+<http://www.example.com/updateChangeConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.com/updateChangeConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> .
+<http://www.example.com/updateChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#predicate> <https://change-detection-ontology.adaptcentre.ie/#hasThreshold> .
+<http://www.example.com/updateChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#subject> <https://change-detection-ontology.adaptcentre.ie/#UpdateSourceData> .
+<https://change-detection-ontology.adaptcentre.ie/#UpdateSourceData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.com/updateChangeConstraint> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#object> "0" .
+# 
+# http://www.example.com/userActor
+<http://www.example.com/userActor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.example.com/userActor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiEntity.owl#Agent> .
+<http://www.example.com/userActor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://www.example.com/userActor> <http://xmlns.com/foaf/0.1/mbox> "alexrandles0@gmail.com" .
+# 
+# https://change-detection-ontology.adaptcentre.ie/#DatatypeSourceData
 # 
 # https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData
 # 
 # https://change-detection-ontology.adaptcentre.ie/#InsertSourceData
 # 
+# https://change-detection-ontology.adaptcentre.ie/#MergeSourceData
+# 
+# https://change-detection-ontology.adaptcentre.ie/#MoveSourceData
+# 
+# https://change-detection-ontology.adaptcentre.ie/#UpdateSourceData
+# 
 # https://change-detection-ontology.adaptcentre.ie/#hasThreshold
+# 
+# https://change-detection-ontology.adaptcentre.ie/#sendNotification
+# 
+# https://change-detection-ontology.adaptcentre.ie/#softwareAgent
 # 
 # 
 # 
@@ -356,6 +398,10 @@
 # #################################################################
 # 
 # 
+<https://change-detection-ontology.adaptcentre.ie/#DatatypeSourceData> <http://www.w3.org/2000/01/rdf-schema#comment> "Datatype has been changed in the source data." .
+<https://change-detection-ontology.adaptcentre.ie/#DatatypeSourceData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://change-detection-ontology.adaptcentre.ie/#> .
+<https://change-detection-ontology.adaptcentre.ie/#DatatypeSourceData> <http://www.w3.org/2000/01/rdf-schema#label> "DatatypeSourceData" .
+# 
 <https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData> <http://www.w3.org/2000/01/rdf-schema#comment> "Data has been removed within the source data." .
 <https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://change-detection-ontology.adaptcentre.ie/#> .
 <https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData> <http://www.w3.org/2000/01/rdf-schema#label> "DeleteSourceData" .
@@ -363,6 +409,18 @@
 <https://change-detection-ontology.adaptcentre.ie/#InsertSourceData> <http://www.w3.org/2000/01/rdf-schema#comment> "Data has been inserted within the source data." .
 <https://change-detection-ontology.adaptcentre.ie/#InsertSourceData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://change-detection-ontology.adaptcentre.ie/#> .
 <https://change-detection-ontology.adaptcentre.ie/#InsertSourceData> <http://www.w3.org/2000/01/rdf-schema#label> "InsertSourceData" .
+# 
+<https://change-detection-ontology.adaptcentre.ie/#MergeSourceData> <http://www.w3.org/2000/01/rdf-schema#comment> "Data has been merged within the source data." .
+<https://change-detection-ontology.adaptcentre.ie/#MergeSourceData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://change-detection-ontology.adaptcentre.ie/#> .
+<https://change-detection-ontology.adaptcentre.ie/#MergeSourceData> <http://www.w3.org/2000/01/rdf-schema#label> "MergeSourceData" .
+# 
+<https://change-detection-ontology.adaptcentre.ie/#MoveSourceData> <http://www.w3.org/2000/01/rdf-schema#comment> "Data has been moved within the source data." .
+<https://change-detection-ontology.adaptcentre.ie/#MoveSourceData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://change-detection-ontology.adaptcentre.ie/#> .
+<https://change-detection-ontology.adaptcentre.ie/#MoveSourceData> <http://www.w3.org/2000/01/rdf-schema#label> "MoveSourceData" .
+# 
+<https://change-detection-ontology.adaptcentre.ie/#UpdateSourceData> <http://www.w3.org/2000/01/rdf-schema#comment> "Data has been updated within the source data." .
+<https://change-detection-ontology.adaptcentre.ie/#UpdateSourceData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://change-detection-ontology.adaptcentre.ie/#> .
+<https://change-detection-ontology.adaptcentre.ie/#UpdateSourceData> <http://www.w3.org/2000/01/rdf-schema#label> "UpdateSourceData" .
 # 
 <https://change-detection-ontology.adaptcentre.ie/#hasThreshold> <http://www.w3.org/2000/01/rdf-schema#comment> "The threshold defined for a change type within the notification policy." .
 <https://change-detection-ontology.adaptcentre.ie/#hasThreshold> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://change-detection-ontology.adaptcentre.ie/#> .

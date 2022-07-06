@@ -1,17 +1,6 @@
 <h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-
-The Change Detection ontology represents changes that have occured in the source data which has created Linked data.
-The ontology extends the <a href="https://linkedevents.org/ontology/">Lode</a>.  ontology to represent changes. Each change is represented as an event <font face="courier-new,  monospace">(lode:Event)</font> which is specific to the change that has occured. 
-A change is characterised based on the action which caused it. 
-For example, if data has been deleted from the source data, the change will be represented as a deletion change <font face="courier-new,  monospace">(cdo:DeleteSourceData)</font>
-Changes are grouped into change logs <font face="courier-new,  monospace">(cdo:ChangeLog)</font> which relates to a specific source data and owner <font face="courier-new,  monospace">(cdo:hasOwner)</font>. 
-Furthermore, information related to why <font face="courier-new,  monospace">(cdo:hasReason)</font> the change has occured is captured. 
-<br>
-<br>
-The ontology allows for a notification policy to be defined using the  <a href="https://www.csee.umbc.edu/~lkagal1/rei/">Rei Policy Ontology</a>. 
-An example of 2 insert data changes and a notification policy is shown within this specification. 
-
-
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
 <div id="namespacedeclarations">
 <h3 id="ns" class="list">Namespace declarations</h3>
 <div id="ns" align="center">
@@ -21,23 +10,24 @@ An example of 2 insert data changes and a notification policy is shown within th
 <tr><td><b>cdo</b></td><td>&lt;https://change-detection-ontology.adaptcentre.ie/#&gt;</td></tr>
 <tr><td></td><td></td></tr>
 <tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
-<tr><td><b>ReiConstraint</b></td><td>&lt;http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl&gt;</td></tr>
+<tr><td><b>rei-deontic</b></td><td>&lt;http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl&gt;</td></tr>
 <tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
 <tr><td><b>ReiAction</b></td><td>&lt;http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiAction.owl&gt;</td></tr>
 <tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core&gt;</td></tr>
 <tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
-<tr><td><b>ReiEntity</b></td><td>&lt;http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiEntity.owl&gt;</td></tr>
-<tr><td><b>ReiDeontic</b></td><td>&lt;http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl&gt;</td></tr>
-<tr><td><b>ReiPolicy</b></td><td>&lt;http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl&gt;</td></tr>
-<tr><td><b>example</b></td><td>&lt;http://example.org&gt;</td></tr>
+<tr><td><b>ex</b></td><td>&lt;http://www.example.com&gt;</td></tr>
 <tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
 <tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
-<tr><td><b>www</b></td><td>&lt;http://www.example.org&gt;</td></tr>
 <tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>lode</b></td><td>&lt;http://linkedevents.org/ontology&gt;</td></tr>
+<tr><td><b>rei-constraint</b></td><td>&lt;http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl&gt;</td></tr>
 <tr><td><b>DUL</b></td><td>&lt;http://www.ontologydesignpatterns.org/ont/dul/DUL.owl&gt;</td></tr>
+<tr><td><b>rei-action</b></td><td>&lt;http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiAction.owl&gt;</td></tr>
 <tr><td><b>time</b></td><td>&lt;http://www.w3.org/2006/time&gt;</td></tr>
 <tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann&gt;</td></tr>
-<tr><td><b>ontology</b></td><td>&lt;http://linkedevents.org/ontology&gt;</td></tr>
+<tr><td><b>rei-policy</b></td><td>&lt;http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl&gt;</td></tr>
+<tr><td><b>foaf</b></td><td>&lt;http://xmlns.com/foaf/0.1&gt;</td></tr>
+<tr><td><b>rei-entity</b></td><td>&lt;http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiEntity.owl&gt;</td></tr>
 </tbody>
 </table>
 </div>
