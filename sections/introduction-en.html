@@ -1,6 +1,9 @@
 <h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+The Change Detection ontology represents changes that have occured in the source data which has created Linked data. The ontology extends the Lode. ontology to represent changes. Each change is represented as an event (lode:Event) which is specific to the change that has occured. A change is characterised based on the action which caused it. For example, if data has been deleted from the source data, the change will be represented as a deletion change (cdo:DeleteSourceData) Changes are grouped into change logs (cdo:ChangeLog) which relates to a specific source data and owner (cdo:hasOwner). Furthermore, information related to why (cdo:hasReason) the change has occured is captured.
+
+The ontology allows for a notification policy to be defined using the Rei Policy Ontology. An example of 2 insert data changes and a notification policy is shown within this specification. 
+
 <div id="namespacedeclarations">
 <h3 id="ns" class="list">Namespace declarations</h3>
 <div id="ns" align="center">
