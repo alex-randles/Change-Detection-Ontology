@@ -1,24 +1,19 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://change-detection-ontology.adaptcentre.ie/#"
      xml:base="https://change-detection-ontology.adaptcentre.ie/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:time="http://www.w3.org/2006/time#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:ontology="http://linkedevents.org/ontology/"
-     xmlns:ReiPolicy="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#"
-     xmlns:ReiDeontic="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#"
-     xmlns:ReiConstraint="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#"
-     xmlns:change-detection-ontology="https://change-detection-ontology.adaptcentre.ie/#">
+     xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://change-detection-ontology.adaptcentre.ie/#">
         <owl:imports rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#"/>
         <owl:imports rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#"/>
         <owl:imports rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"/>
         <terms:abstract>The Change Detection Ontology (CDO) provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance and metadata information relating to changes that occur within source data that has created an RDF dataset. It can also be specialized to create new classes and properties to model provenance and metadata information for domain specific changes.</terms:abstract>
         <terms:created>20 April 2022</terms:created>
         <terms:creator>Alex Randles</terms:creator>
@@ -44,27 +39,6 @@ The ontology allows a notification policy to be defined to notify users when a t
      -->
 
 
-    
-
-
-    <!-- http://linkedevents.org/ontology/atPlace -->
-
-
-    <owl:AnnotationProperty rdf:about="http://linkedevents.org/ontology/atPlace"/>
-    
-
-
-    <!-- http://linkedevents.org/ontology/atTime -->
-
-
-    <owl:AnnotationProperty rdf:about="http://linkedevents.org/ontology/atTime"/>
-    
-
-
-    <!-- http://linkedevents.org/ontology/involvedAgent -->
-
-
-    <owl:AnnotationProperty rdf:about="http://linkedevents.org/ontology/involvedAgent"/>
     
 
 
@@ -96,13 +70,6 @@ The ontology allows a notification policy to be defined to notify users when a t
     
 
 
-    <!-- http://purl.org/dc/terms/issued -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
-    
-
-
     <!-- http://purl.org/dc/terms/license -->
 
 
@@ -131,55 +98,6 @@ The ontology allows a notification policy to be defined to notify users when a t
     
 
 
-    <!-- http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#object -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#object"/>
-    
-
-
-    <!-- http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#action -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#action"/>
-    
-
-
-    <!-- http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#actor -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#actor"/>
-    
-
-
-    <!-- http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#startingConstraint -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#startingConstraint"/>
-    
-
-
-    <!-- http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#desc -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#desc"/>
-    
-
-
-    <!-- http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#grants -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#grants"/>
-    
-
-
-    <!-- http://www.w3.org/2004/02/skos/core#definition -->
-
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -192,16 +110,29 @@ The ontology allows a notification policy to be defined to notify users when a t
     
 
 
-    <!-- https://change-detection-ontology.adaptcentre.ie/#hasEvent -->
+    <!-- https://change-detection-ontology.adaptcentre.ie/#hasChange -->
 
 
-    <owl:ObjectProperty rdf:about="https://change-detection-ontology.adaptcentre.ie/#hasEvent">
-        <owl:inverseOf rdf:resource="https://change-detection-ontology.adaptcentre.ie/#inEventLog"/>
+    <owl:ObjectProperty rdf:about="https://change-detection-ontology.adaptcentre.ie/#hasChange">
         <rdfs:domain rdf:resource="https://change-detection-ontology.adaptcentre.ie/#ChangeLog"/>
         <rdfs:range rdf:resource="http://linkedevents.org/ontology/Event"/>
-        <rdfs:comment>An event within a certain event log.</rdfs:comment>
+        <rdfs:comment>A change within a particular change log.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
-        <rdfs:label>hasEvent</rdfs:label>
+        <rdfs:label>hasChange</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://change-detection-ontology.adaptcentre.ie/#hasCurrentSource -->
+
+
+    <owl:ObjectProperty rdf:about="https://change-detection-ontology.adaptcentre.ie/#hasCurrentSource">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://change-detection-ontology.adaptcentre.ie/#ChangeLog"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment>The current version of the source data.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
+        <rdfs:label>hasCurrentSource</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -210,25 +141,39 @@ The ontology allows a notification policy to be defined to notify users when a t
 
 
     <owl:ObjectProperty rdf:about="https://change-detection-ontology.adaptcentre.ie/#hasOwner">
-        <owl:inverseOf rdf:resource="https://change-detection-ontology.adaptcentre.ie/#ownedBy"/>
         <rdfs:domain rdf:resource="https://change-detection-ontology.adaptcentre.ie/#ChangeLog"/>
         <rdfs:range rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
-        <rdfs:comment>The owner of the event log.</rdfs:comment>
+        <rdfs:comment>The agent who owns the change log.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
         <rdfs:label>hasOwner</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://change-detection-ontology.adaptcentre.ie/#inEventLog -->
+    <!-- https://change-detection-ontology.adaptcentre.ie/#hasPreviousSource -->
 
 
-    <owl:ObjectProperty rdf:about="https://change-detection-ontology.adaptcentre.ie/#inEventLog">
+    <owl:ObjectProperty rdf:about="https://change-detection-ontology.adaptcentre.ie/#hasPreviousSource">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://change-detection-ontology.adaptcentre.ie/#ChangeLog"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <rdfs:comment>The previous version of the source data.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
+        <rdfs:label>hasPreviousSource</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://change-detection-ontology.adaptcentre.ie/#inChangeLog -->
+
+
+    <owl:ObjectProperty rdf:about="https://change-detection-ontology.adaptcentre.ie/#inChangeLog">
+        <owl:inverseOf rdf:resource="https://change-detection-ontology.adaptcentre.ie/#hasChange"/>
         <rdfs:domain rdf:resource="http://linkedevents.org/ontology/Event"/>
         <rdfs:range rdf:resource="https://change-detection-ontology.adaptcentre.ie/#ChangeLog"/>
-        <rdfs:comment>An event within an event log.</rdfs:comment>
+        <rdfs:comment>A change within a change log.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
-        <rdfs:label>inEventLog</rdfs:label>
+        <rdfs:label>inChangeLog</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -237,7 +182,10 @@ The ontology allows a notification policy to be defined to notify users when a t
 
 
     <owl:ObjectProperty rdf:about="https://change-detection-ontology.adaptcentre.ie/#ownedBy">
-        <rdfs:comment>The agent who owns the change log.</rdfs:comment>
+        <owl:inverseOf rdf:resource="https://change-detection-ontology.adaptcentre.ie/#hasOwner"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
+        <rdfs:range rdf:resource="https://change-detection-ontology.adaptcentre.ie/#ChangeLog"/>
+        <rdfs:comment>The owner of the change log.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
         <rdfs:label>ownedBy</rdfs:label>
     </owl:ObjectProperty>
@@ -256,36 +204,30 @@ The ontology allows a notification policy to be defined to notify users when a t
     
 
 
-    <!-- http://www.w3.org/2006/time#inXSDDateTimeStamp -->
+    <!-- https://change-detection-ontology.adaptcentre.ie/#hasDetectionEnd -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#inXSDDateTimeStamp"/>
-    
-
-
-    <!-- https://change-detection-ontology.adaptcentre.ie/#detectionEnd -->
-
-
-    <owl:DatatypeProperty rdf:about="https://change-detection-ontology.adaptcentre.ie/#detectionEnd">
+    <owl:DatatypeProperty rdf:about="https://change-detection-ontology.adaptcentre.ie/#hasDetectionEnd">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:comment>The time when the notification policy is finished.</rdfs:comment>
+        <rdfs:comment>The time when the notification policy is terminated.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
-        <rdfs:label>detectionEnd</rdfs:label>
+        <rdfs:label>hasDetectionEnd</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://change-detection-ontology.adaptcentre.ie/#detectionStart -->
+    <!-- https://change-detection-ontology.adaptcentre.ie/#hasDetectionStart -->
 
 
-    <owl:DatatypeProperty rdf:about="https://change-detection-ontology.adaptcentre.ie/#detectionStart">
+    <owl:DatatypeProperty rdf:about="https://change-detection-ontology.adaptcentre.ie/#hasDetectionStart">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment>The time when the notification policy was created.</rdfs:comment>
-        <rdfs:label>detectionStart</rdfs:label>
+        <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
+        <rdfs:label>hasDetectionStart</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -311,6 +253,9 @@ The ontology allows a notification policy to be defined to notify users when a t
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>The threshold defined for a change type within the notification policy.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
+        <rdfs:label>hasThreshold</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -334,59 +279,10 @@ The ontology allows a notification policy to be defined to notify users when a t
     
 
 
-    <!-- http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiAction.owl#Action -->
+    <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
 
 
-    <owl:Class rdf:about="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiAction.owl#Action"/>
-    
-
-
-    <!-- http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#Obligation -->
-
-
-    <owl:Class rdf:about="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#Obligation"/>
-    
-
-
-    <!-- http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiEntity.owl#Agent -->
-
-
-    <owl:Class rdf:about="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiEntity.owl#Agent"/>
-    
-
-
-    <!-- http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy -->
-
-
-    <owl:Class rdf:about="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy"/>
-    
-
-
-    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent -->
-
-
-    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
-    
-
-
-    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place -->
-
-
-    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place"/>
-    
-
-
-    <!-- http://www.w3.org/2006/time#Instant -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/2006/time#Instant"/>
-    
-
-
-    <!-- http://www.w3.org/2006/time#TemporalEntity -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalEntity"/>
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     
 
 
@@ -394,7 +290,7 @@ The ontology allows a notification policy to be defined to notify users when a t
 
 
     <owl:Class rdf:about="https://change-detection-ontology.adaptcentre.ie/#ChangeLog">
-        <rdfs:comment>A grouping of changes that have occured relating to a specific source data.</rdfs:comment>
+        <rdfs:comment>A grouping of changes that have occured within a specific source data.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
         <rdfs:label>ChangeLog</rdfs:label>
     </owl:Class>
@@ -418,6 +314,9 @@ The ontology allows a notification policy to be defined to notify users when a t
 
     <owl:Class rdf:about="https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData">
         <rdfs:subClassOf rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdfs:comment>Data has been removed within the source data.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
+        <rdfs:label>DeleteSourceData</rdfs:label>
     </owl:Class>
     
 
@@ -427,6 +326,9 @@ The ontology allows a notification policy to be defined to notify users when a t
 
     <owl:Class rdf:about="https://change-detection-ontology.adaptcentre.ie/#InsertSourceData">
         <rdfs:subClassOf rdf:resource="http://linkedevents.org/ontology/Event"/>
+        <rdfs:comment>Data has been inserted within the source data.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
+        <rdfs:label>InsertSourceData</rdfs:label>
     </owl:Class>
     
 
@@ -464,224 +366,6 @@ The ontology allows a notification policy to be defined to notify users when a t
         <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
         <rdfs:label>UpdateSourceData</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    
-
-
-    <!-- http://example.org/changeLog -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/changeLog">
-        <rdf:type rdf:resource="https://change-detection-ontology.adaptcentre.ie/#ChangeLog"/>
-        <hasEvent rdf:resource="http://example.org/insertEvent1"/>
-        <hasEvent rdf:resource="http://example.org/insertEvent2"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/detectionTime -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/detectionTime">
-        <rdf:type rdf:resource="http://www.w3.org/2006/time#Instant"/>
-        <time:inXSDDateTimeStamp>2004-04-12T13:20:00Z</time:inXSDDateTimeStamp>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/eventLog -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/eventLog">
-        <rdf:type rdf:resource="https://change-detection-ontology.adaptcentre.ie/#ChangeLog"/>
-        <hasEvent rdf:resource="http://example.org/insertEvent1"/>
-        <hasEvent rdf:resource="http://example.org/insertEvent2"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/insertEvent1 -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/insertEvent1">
-        <rdf:type rdf:resource="https://change-detection-ontology.adaptcentre.ie/#InsertSourceData"/>
-        <hasReason>Value &apos;12&apos; inserted into &apos;ID&apos; element.</hasReason>
-        <ontology:atPlace rdf:resource="http://example.org/sourceData"/>
-        <ontology:atTime rdf:resource="http://example.org/detectionTime"/>
-        <ontology:involvedAgent rdf:resource="http://example.org/userAgent"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/insertEvent2 -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/insertEvent2">
-        <rdf:type rdf:resource="https://change-detection-ontology.adaptcentre.ie/#InsertSourceData"/>
-        <hasReason>Value &apos;23&apos; inserted into &apos;ID&apos; element</hasReason>
-        <ontology:atPlace rdf:resource="http://example.org/sourceData"/>
-        <ontology:atTime rdf:resource="http://example.org/detectionTime"/>
-        <ontology:involvedAgent rdf:resource="http://example.org/userAgent"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/notificationConstraint -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/notificationConstraint">
-        <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#And"/>
-        <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint"/>
-        <ReiConstraint:first rdf:resource="http://www.example.org/insertChangeConstraint"/>
-        <ReiConstraint:second rdf:resource="http://www.example.org/deleteChangeConstraint"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/notificationPolicy -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/notificationPolicy">
-        <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy"/>
-        <ReiPolicy:grants rdf:resource="http://example.org/policyObligation"/>
-        <detectionEnd rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-17 00:00:00.0000</detectionEnd>
-        <detectionStart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-05-20 15:46:14.855752</detectionStart>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/policyObligation -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/policyObligation">
-        <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#Obligation"/>
-        <ReiDeontic:action rdf:resource="http://example.org/sendNotificationAction"/>
-        <ReiDeontic:actor rdf:resource="http://example.org/softwareAgent"/>
-        <ReiDeontic:actor rdf:resource="http://example.org/userAgent"/>
-        <ReiDeontic:startingConstraint rdf:resource="http://example.org/notificationConstraint"/>
-        <ReiPolicy:desc>Obligation to send notification when threshold satisified</ReiPolicy:desc>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/sendNotificationAction -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/sendNotificationAction">
-        <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiAction.owl#Action"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/softwareAgent -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/softwareAgent">
-        <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiEntity.owl#Agent"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/sourceData -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/sourceData">
-        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Place"/>
-        <ontology:atPlace rdf:resource="http://example.org/sourceData"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://example.org/userAgent -->
-
-
-    <owl:NamedIndividual rdf:about="http://example.org/userAgent">
-        <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiEntity.owl#Agent"/>
-        <rdf:type rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.example.org/deleteChangeConstraint -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.example.org/deleteChangeConstraint">
-        <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint"/>
-        <ReiConstraint:predicate rdf:resource="https://change-detection-ontology.adaptcentre.ie/#hasThreshold"/>
-        <ReiConstraint:subject rdf:resource="https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData"/>
-        <ReiConstraint:object>5</ReiConstraint:object>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.example.org/insertChangeConstraint -->
-
-
-    <owl:NamedIndividual rdf:about="http://www.example.org/insertChangeConstraint">
-        <rdf:type rdf:resource="http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint"/>
-        <ReiConstraint:predicate rdf:resource="https://change-detection-ontology.adaptcentre.ie/#hasThreshold"/>
-        <ReiConstraint:subject rdf:resource="https://change-detection-ontology.adaptcentre.ie/#InsertSourceData"/>
-        <ReiConstraint:object>0</ReiConstraint:object>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData -->
-
-
-    <owl:NamedIndividual rdf:about="https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData"/>
-    
-
-
-    <!-- https://change-detection-ontology.adaptcentre.ie/#InsertSourceData -->
-
-
-    <owl:NamedIndividual rdf:about="https://change-detection-ontology.adaptcentre.ie/#InsertSourceData"/>
-    
-
-
-    <!-- https://change-detection-ontology.adaptcentre.ie/#hasThreshold -->
-
-
-    <owl:NamedIndividual rdf:about="https://change-detection-ontology.adaptcentre.ie/#hasThreshold"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    <rdf:Description rdf:about="https://change-detection-ontology.adaptcentre.ie/#DeleteSourceData">
-        <rdfs:comment>Data has been removed within the source data.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
-        <rdfs:label>DeleteSourceData</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://change-detection-ontology.adaptcentre.ie/#InsertSourceData">
-        <rdfs:comment>Data has been inserted within the source data.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
-        <rdfs:label>InsertSourceData</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://change-detection-ontology.adaptcentre.ie/#hasThreshold">
-        <rdfs:comment>The threshold defined for a change type within the notification policy.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://change-detection-ontology.adaptcentre.ie/#"/>
-        <rdfs:label>hasThreshold</rdfs:label>
-    </rdf:Description>
 </rdf:RDF>
 
 
