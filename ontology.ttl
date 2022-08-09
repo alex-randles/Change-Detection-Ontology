@@ -7,10 +7,6 @@
 @base <https://change-detection-ontology.adaptcentre.ie/#> .
 
 <https://change-detection-ontology.adaptcentre.ie/#> rdf:type owl:Ontology ;
-                                                      owl:imports <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#> ,
-                                                                  <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#> ,
-                                                                  <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#> ,
-                                                                  <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> ;
                                                       <http://purl.org/dc/terms/abstract> "The Change Detection Ontology (CDO) provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance and metadata information relating to changes that occur within source data that has created an RDF dataset. It can also be specialized to create new classes and properties to model provenance and metadata information for domain specific changes." ;
                                                       <http://purl.org/dc/terms/created> "20 April 2022" ;
                                                       <http://purl.org/dc/terms/creator> "Alex Randles" ,
@@ -85,10 +81,11 @@ The ontology allows a notification policy to be defined to notify users when a t
 
 ###  https://change-detection-ontology.adaptcentre.ie/#hasNotificationPolicy
 :hasNotificationPolicy rdf:type owl:ObjectProperty ;
+                       owl:inverseOf :isNotificationPolicy ;
                        rdfs:domain :ChangeLog ;
                        rdfs:range <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy> ;
-                       rdfs:comment "The notification policy associated with the change log." ;
-                       rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
+                       rdfs:comment "The notification policy of the change log." ;
+                       rdfs:isDefinedBy <http://change-detection-ontology.adaptcentre.ie/#> ;
                        rdfs:label "hasNotificationPolicy" .
 
 
@@ -106,7 +103,7 @@ The ontology allows a notification policy to be defined to notify users when a t
                             owl:FunctionalProperty ;
                    rdfs:domain :ChangeLog ;
                    rdfs:range rdfs:Resource ;
-                   rdfs:comment "The previous version of the source data." ;
+                   rdfs:comment "The previous version of the source data of the change log." ;
                    rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
                    rdfs:label "hasPreviousSource" .
 
@@ -119,6 +116,37 @@ The ontology allows a notification policy to be defined to notify users when a t
              rdfs:comment "A change within a change log." ;
              rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
              rdfs:label "inChangeLog" .
+
+
+###  https://change-detection-ontology.adaptcentre.ie/#isCurrentSource
+:isCurrentSource rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :hasCurrentSource ;
+                 rdf:type owl:FunctionalProperty ;
+                 rdfs:domain rdfs:Resource ;
+                 rdfs:range :ChangeLog ;
+                 rdfs:comment "The current version of the source data." ;
+                 rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
+                 rdfs:label "isCurrentSource" .
+
+
+###  https://change-detection-ontology.adaptcentre.ie/#isNotificationPolicy
+:isNotificationPolicy rdf:type owl:ObjectProperty ;
+                      rdfs:domain <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy> ;
+                      rdfs:range :ChangeLog ;
+                      rdfs:comment "The notification policy defined for the change log" ;
+                      rdfs:isDefinedBy <http://change-detection-ontology.adaptcentre.ie/#> ;
+                      rdfs:label "isNotificationPolicy" .
+
+
+###  https://change-detection-ontology.adaptcentre.ie/#isPreviousSource
+:isPreviousSource rdf:type owl:ObjectProperty ;
+                  owl:inverseOf :hasPreviousSource ;
+                  rdf:type owl:FunctionalProperty ;
+                  rdfs:domain rdfs:Resource ;
+                  rdfs:range :ChangeLog ;
+                  rdfs:comment "The previous version of the source " ;
+                  rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
+                  rdfs:label "isPreviousSource" .
 
 
 ###  https://change-detection-ontology.adaptcentre.ie/#ownedBy
@@ -183,12 +211,30 @@ The ontology allows a notification policy to be defined to notify users when a t
 <http://linkedevents.org/ontology/Event> rdf:type owl:Class .
 
 
+###  http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint
+<http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#SimpleConstraint> rdf:type owl:Class .
+
+
+###  http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy
+<http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy> rdf:type owl:Class .
+
+
+###  http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> rdf:type owl:Class .
+
+
 ###  http://www.w3.org/2000/01/rdf-schema#Resource
 rdfs:Resource rdf:type owl:Class .
 
 
 ###  https://change-detection-ontology.adaptcentre.ie/#ChangeLog
 :ChangeLog rdf:type owl:Class ;
+           owl:disjointWith :DatatypeSourceData ,
+                            :DeleteSourceData ,
+                            :InsertSourceData ,
+                            :MergeSourceData ,
+                            :MoveSourceData ,
+                            :UpdateSourceData ;
            rdfs:comment "A grouping of changes that have occured within a specific source data." ;
            rdfs:isDefinedBy <https://change-detection-ontology.adaptcentre.ie/#> ;
            rdfs:label "ChangeLog" .
