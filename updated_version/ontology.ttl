@@ -184,13 +184,26 @@ The ontology allows a notification policy to be defined to notify users when a t
 
 
 ###  https://w3id.org/CDO#hasReason
-:hasReason rdf:type owl:DatatypeProperty ,
-                    owl:FunctionalProperty ;
+:hasChangedData rdf:type owl:DatatypeProperty ;
            rdfs:domain <http://linkedevents.org/ontology/Event> ;
            rdfs:range xsd:string ;
-           rdfs:comment "The reason a change occurred." ;
+           rdfs:comment "The data within the source data which has been altered."; 
            rdfs:isDefinedBy <https://w3id.org/CDO#> ;
-           rdfs:label "hasReason" .
+           rdfs:label "hasChangedData" .
+
+:hasDataReference rdf:type owl:DatatypeProperty ; 
+           rdfs:domain <http://linkedevents.org/ontology/Event> ;
+           rdfs:range xsd:string ;
+           rdfs:comment "A reference to specific source data associated with a change." ;
+           rdfs:isDefinedBy <https://w3id.org/CDO#> ;
+           rdfs:label "hasDataReference" .
+
+:hasStructuralReference rdf:type owl:DatatypeProperty ;
+           rdfs:domain <http://linkedevents.org/ontology/Event> ;
+           rdfs:range xsd:string ;
+           rdfs:comment "A reference to a structural component of the source data associated with a change." ;
+           rdfs:isDefinedBy <https://w3id.org/CDO#> ;
+           rdfs:label "hasStructuralReference" .
 
 
 ###  https://w3id.org/CDO#hasThreshold
