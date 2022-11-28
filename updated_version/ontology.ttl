@@ -63,7 +63,7 @@
 :hasChange rdf:type owl:ObjectProperty ;
            rdfs:domain :ChangeLog ;
            rdfs:range <http://linkedevents.org/ontology/Event> ;
-           rdfs:comment "A change contained in a specific change log." ;
+           rdfs:comment "A change in a change log." ;
            rdfs:isDefinedBy <https://w3id.org/CDO#> ;
            rdfs:label "hasChange" .
 
@@ -82,7 +82,7 @@
                    owl:inverseOf :isNotificationPolicy ;
                    rdfs:domain :ChangeLog ;
                    rdfs:range <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#Policy> ;
-                   rdfs:comment "The notification policy details related to a specific change log." ;
+                   rdfs:comment "The notification policy details related to a change log." ;
                    rdfs:isDefinedBy <https://w3id.org/CDO#> ;
                    rdfs:label "hasNotificationPolicy" .
 
@@ -190,7 +190,7 @@
 :hasDataReference rdf:type owl:DatatypeProperty ; 
            rdfs:domain <http://linkedevents.org/ontology/Event> ;
            rdfs:range xsd:string ;
-           rdfs:comment "A reference to specific source data associated with a change." ;
+           rdfs:comment "A reference to source data associated with a change." ;
            rdfs:isDefinedBy <https://w3id.org/CDO#> ;
            rdfs:label "hasDataReference" .
 
@@ -244,7 +244,7 @@ rdfs:Resource rdf:type owl:Class .
                             :MergeSourceData ,
                             :MoveSourceData ,
                             :UpdateSourceData ;
-           rdfs:comment "A grouping of changes that have occured within a specific source data." ;
+           rdfs:comment "A grouping of changes that have occured in a source data." ;
            rdfs:isDefinedBy <https://w3id.org/CDO#> ;
            rdfs:label "ChangeLog" .
 
@@ -276,7 +276,7 @@ rdfs:Resource rdf:type owl:Class .
 ###  https://w3id.org/CDO#MergeSourceData
 :MergeSourceData rdf:type owl:Class ;
                  rdfs:subClassOf <http://linkedevents.org/ontology/Event> ;
-                 rdfs:comment "The source data has been merged with other data." ;
+                 rdfs:comment "Source data has been merged with other data." ;
                  rdfs:isDefinedBy <https://w3id.org/CDO#> ;
                  rdfs:label "MergeSourceData" .
 
