@@ -11,8 +11,7 @@
                               <http://purl.org/dc/terms/created> "20 April 2022" ;
                               <http://purl.org/dc/terms/creator> "Alex Randles" ,
                                                                  "Declan O'Sullivan" ;
-                              <http://purl.org/dc/terms/description> """The Change Detection Ontology (CDO) is used to capture information which relates the changes that have occured within the source data of an RDF dataset.
-                              The ontology allows a notification policy to be defined which will notify users when a defined threshold of changes has been reached. Once notified the mapping and source data should be re-examined to ensure no further action is required to prevent a decrease in mapping and dataset quality.""" ;
+                              <http://purl.org/dc/terms/description> "The Change Detection Ontology (CDO) is used to capture information which relates the changes that have occured within the source data of an RDF dataset. The ontology allows a notification policy to be defined which will notify users when a defined threshold of changes has been reached. Once notified the mapping and source data should be re-examined to ensure no further action is required to prevent a decrease in quality." ;
                               <http://purl.org/dc/terms/license> "http://creativecommons.org/publicdomain/zero/1.0/" ;
                               <http://purl.org/dc/terms/title> "Change Detection Ontology (CDO)" ;
                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "cdo" ;
