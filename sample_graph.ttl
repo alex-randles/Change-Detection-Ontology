@@ -1,12 +1,6 @@
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix rei-deontic: <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiDeontic.owl#> .
-@prefix rei-policy: <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl#> .
-@prefix rei-constraint: <http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiConstraint.owl#> .
 @prefix cdo: <https://w3id.org/CDO#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix time: <http://www.w3.org/2006/time#> .
 @prefix lode: <http://linkedevents.org/ontology/> .
-@prefix prov: <http://www.w3.org/ns/prov#> . 
 
 <http://www.example.com/changeLog/user-1>
   a cdo:ChangeLog ;

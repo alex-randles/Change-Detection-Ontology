@@ -11,13 +11,35 @@ has been inspired by the state of the art in Linked data change detection <a hre
   <br>
 </figure> 
 
+
+The detection of changes within the source data is initiated by an agent who is responsible for maintaining the data (<span style="font-family: 'Courier New', monospace;">cdo:hasMaintainer</span>). 
+Changes will be detected between a previous version (<span style="font-family: 'Courier New', monospace;">cdo:hasPreviousSource</span>) and
+the current version (<span style="font-family: 'Courier New', monospace;">cdo:hasCurrentversion</span>). 
+Once the change detection process has been initiated, changes are detected between when the process began 
+(<span style="font-family: 'Courier New', monospace;">cdo:hasDetectionStart</span>) 
+and a predetermined end date (<span style="font-family: 'Courier New', monospace;">cdo:hasDetectionEnd</span>) 
+which is defined by the maintainer. A notification policy (<span style="font-family: 'Courier New', monospace;">cdo:hasNotificationPolicy</span>) can be 
+defined which is represented with the <a href="https://redirect.cs.umbc.edu/~lkagal1/rei/">Rei policy ontology</a>. 
+The notification policy allows agents to be notified of changes when a certain amount has occurred. 
+Therefore, ensuring the maintainers are informed of changes when required. 
+<br>
+<br>
+Changes are represented as specialized events (<span style="font-family: 'Courier New', monospace;">lode:Event</span>) which have occurred in the source data used to generate linked data. 
+Different change types exist within the ontology which allow the cause of the change to be captured.
+For instance, a value is inserted (<span style="font-family: 'Courier New', monospace;">cdo:InsertSourceData</span>) in the source data. 
+Additional information related to the change such as the data inserted (<span style="font-family: 'Courier New', monospace;">cdo:hasChangedData</span>) or 
+its location within the source data (<span style="font-family: 'Courier New', monospace;">cdo:hasDataReference</span>). 
+The model can be extended to capture domain specific changes.
+
+
+
 <div id="namespacedeclarations">
 <h3 id="ns" class="list">Namespace declarations</h3>
 <div id="ns" align="center">
 <table>
 <caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
 <tbody>
-<tr><td><b>cdo</b></td><td>&lt;https://change-detection-ontology.adaptcentre.ie/#&gt;</td></tr>
+<tr><td><b>cdo</b></td><td>&lt;https://w3id.org/CDO#&gt;</td></tr>
 <tr><td></td><td></td></tr>
 <tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
 <tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
@@ -29,7 +51,7 @@ has been inspired by the state of the art in Linked data change detection <a hre
 <tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
 <tr><td><b>ReiPolicy</b></td><td>&lt;http://www.cs.umbc.edu/~lkagal1/rei/ontologies/ReiPolicy.owl&gt;</td></tr>
 <tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann&gt;</td></tr>
-<tr><td><b>lode</b></td><td>&lt;http://linkedevents.org/ontology&gt;</td></tr>
+<tr><td><b>ontology</b></td><td>&lt;http://linkedevents.org/ontology&gt;</td></tr>
 </tbody>
 </table>
 </div>
