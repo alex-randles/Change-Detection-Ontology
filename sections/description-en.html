@@ -27,10 +27,10 @@ WHERE {
   } 
   GRAPH ?mappingGraph { 				
     ?tripleMap rml:logicalSource|rr:logicalTable ?logicalSource;
-                                rr:predicateObjectMap ?pom .
-    ?logicalSource 	rml:source|rr:tableName ?source .
+               rr:predicateObjectMap ?pom .
+    ?logicalSource rml:source|rr:tableName ?source .
     ?pom rr:objectMap ?objectMap .
-	?objectMap  rml:reference|rr:column ?reference.
+    ?objectMap rml:reference|rr:column ?reference.
   } 
 } </code>
 </pre>
